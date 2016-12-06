@@ -23,7 +23,8 @@
         <activity android:name=".AddPatient" />
         <activity android:name=".PatientView" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".PatientPage"></activity>
+        <activity android:name=".PatientPage" />
+        <activity android:name=".AddTest"></activity>
     </application>
 
 </manifest>
