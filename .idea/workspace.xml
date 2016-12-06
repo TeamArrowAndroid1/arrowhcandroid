@@ -7,110 +7,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2de29b60-26d4-471b-9e99-6d1d98c7b094" name="Default" comment="Creating Add Test Activity">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/AddTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/arrowapp/src/main/res/layout/activity_add_test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley" afterPath="$PROJECT_DIR$/volley" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/accessibility_test_framework_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/ant_1_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/ant_launcher_1_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/asm_5_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/asm_analysis_5_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/asm_commons_5_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/asm_tree_5_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/asm_util_5_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/bcprov_jdk16_1_46.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/espresso_core_2_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_2_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/exposed_instrumentation_api_publish_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_integration_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_library_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/icu4j_53_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javawriter_2_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javax_annotation_api_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jsr305_2_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/maven_ant_tasks_2_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mockito_core_1_9_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/objenesis_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/robolectric_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/robolectric_annotations_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/robolectric_resources_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/robolectric_utils_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/shadows_core_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/sqlite4java_0_282.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/vtd_xml_2_11.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_volley_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_volley_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_volley_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_volley_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_volley_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_volley_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_volley_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_volley_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-22.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-22.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrowapp/arrowapp.iml" afterPath="$PROJECT_DIR$/arrowapp/arrowapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrowapp/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/arrowapp/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/.gitignore" afterPath="$PROJECT_DIR$/volley/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/Android.mk" afterPath="$PROJECT_DIR$/volley/Android.mk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/bintray.gradle" afterPath="$PROJECT_DIR$/volley/bintray.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build.gradle" afterPath="$PROJECT_DIR$/volley/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build.xml" afterPath="$PROJECT_DIR$/volley/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/custom_rules.xml" afterPath="$PROJECT_DIR$/volley/custom_rules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/pom.xml" afterPath="$PROJECT_DIR$/volley/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/proguard-project.txt" afterPath="$PROJECT_DIR$/volley/proguard-project.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/proguard.cfg" afterPath="$PROJECT_DIR$/volley/proguard.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/rules.gradle" afterPath="$PROJECT_DIR$/volley/rules.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/volley/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/AuthFailureError.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/AuthFailureError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/Cache.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/Cache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/CacheDispatcher.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/CacheDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ClientError.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ClientError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/DefaultRetryPolicy.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/DefaultRetryPolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ExecutorDelivery.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ExecutorDelivery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/Network.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/Network.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/NetworkDispatcher.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/NetworkDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/NetworkError.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/NetworkError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/NetworkResponse.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/NetworkResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/NoConnectionError.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/NoConnectionError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ParseError.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ParseError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/Request.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/RequestQueue.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/RequestQueue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/Response.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/Response.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ResponseDelivery.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ResponseDelivery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/RetryPolicy.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/RetryPolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ServerError.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/ServerError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/TimeoutError.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/TimeoutError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/VolleyError.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/VolleyError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/VolleyLog.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/VolleyLog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/AndroidAuthenticator.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/AndroidAuthenticator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/Authenticator.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/Authenticator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/BasicNetwork.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/BasicNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ByteArrayPool.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ByteArrayPool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ClearCacheRequest.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ClearCacheRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/DiskBasedCache.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/DiskBasedCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HttpClientStack.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HttpClientStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HttpHeaderParser.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HttpHeaderParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HttpStack.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HttpStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HurlStack.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/HurlStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ImageLoader.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ImageLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ImageRequest.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/ImageRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/JsonArrayRequest.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/JsonArrayRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/JsonObjectRequest.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/JsonObjectRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/JsonRequest.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/JsonRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/NetworkImageView.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/NetworkImageView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/NoCache.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/NoCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/PoolingByteArrayOutputStream.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/PoolingByteArrayOutputStream.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/RequestFuture.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/RequestFuture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/StringRequest.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/StringRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/Volley.java" afterPath="$PROJECT_DIR$/volley/src/main/java/com/android/volley/toolbox/Volley.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/CacheDispatcherTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/CacheDispatcherTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/NetworkDispatcherTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/NetworkDispatcherTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/RequestQueueIntegrationTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/RequestQueueIntegrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/RequestQueueTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/RequestQueueTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/RequestTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/RequestTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/ResponseDeliveryTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/ResponseDeliveryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockCache.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockHttpClient.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockHttpClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockHttpStack.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockHttpStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockHttpURLConnection.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockHttpURLConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockNetwork.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockRequest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockResponseDelivery.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/MockResponseDelivery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/ShadowSystemClock.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/ShadowSystemClock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/TestRequest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/TestRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/WaitableQueue.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/mock/WaitableQueue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/AndroidAuthenticatorTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/AndroidAuthenticatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/BasicNetworkTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/BasicNetworkTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/ByteArrayPoolTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/ByteArrayPoolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/CacheTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/CacheTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/DiskBasedCacheTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/DiskBasedCacheTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/HttpClientStackTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/HttpClientStackTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/HttpHeaderParserTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/HttpHeaderParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/HurlStackTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/HurlStackTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/ImageLoaderTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/ImageLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/ImageRequestTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/ImageRequestTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/JsonRequestCharsetTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/JsonRequestCharsetTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/JsonRequestTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/JsonRequestTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/NetworkImageViewTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/NetworkImageViewTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/PoolingByteArrayOutputStreamTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/PoolingByteArrayOutputStreamTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/RequestFutureTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/RequestFutureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/RequestQueueTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/RequestQueueTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/RequestTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/RequestTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/ResponseTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/ResponseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/StringRequestTest.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/toolbox/StringRequestTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/utils/CacheTestUtils.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/utils/CacheTestUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/utils/ImmediateResponseDelivery.java" afterPath="$PROJECT_DIR$/volley/src/test/java/com/android/volley/utils/ImmediateResponseDelivery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/src/test/resources/org.robolectric.Config.properties" afterPath="$PROJECT_DIR$/volley/src/test/resources/org.robolectric.Config.properties" />
     </list>
     <ignored path="arrowhcandroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -142,7 +88,7 @@
     <favorites_list name="arrowhcandroid" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arrowapp/src/main/AndroidManifest.xml">
           <provider editor-type-id="android-manifest">
@@ -169,11 +115,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/AddTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddPatient.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/AddPatient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2505">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -222,7 +178,7 @@
       <file leaf-file-name="SearchActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/SearchActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
+            <state relative-caret-position="495">
               <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding />
             </state>
@@ -2873,8 +2829,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2892,10 +2846,6 @@
               <option name="myItemId" value="arrowapp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2907,12 +2857,8 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2931,58 +2877,14 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="arrowhc" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arrowhcandroid" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arrowapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arrowhc" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arrowhcandroid" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arrowapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arrowhc" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arrowhcandroid" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arrowapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3305,37 +3207,37 @@
     <frame x="24" y="30" width="1400" height="782" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -3350,6 +3252,73 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/res/layout/activity_add_test.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/AddTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/PatientPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/PatientView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/SignIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/StaffActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/SearchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/PatientPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -3384,7 +3353,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/SearchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="495">
           <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding />
         </state>
@@ -3402,14 +3371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/AddPatient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -3440,6 +3401,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/AddPatient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2505">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding />
         </state>
       </provider>
