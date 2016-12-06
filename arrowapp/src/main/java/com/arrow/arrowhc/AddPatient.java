@@ -94,22 +94,31 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
             }
         });
 
-         departs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+         departs.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
              @Override
-             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                  departMent=parent.getItemAtPosition(position).toString();
                  Toast.makeText(AddPatient.this,departMent, Toast.LENGTH_SHORT).show();
              }
+
+             @Override
+             public void onNothingSelected(AdapterView<?> parent) {
+
+             }
          });
 
-           roomnos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           roomnos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                @Override
-               public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+               public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                    roomNo=parent.getItemAtPosition(position).toString();
                    Toast.makeText(AddPatient.this,roomNo, Toast.LENGTH_SHORT).show();
                }
-           });
 
+               @Override
+               public void onNothingSelected(AdapterView<?> parent) {
+
+               }
+           });
         saveP=(Button)findViewById(R.id.addpatientt);
         saveP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -220,6 +229,7 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
         {
             // Toast.makeText(getBaseContext(), doctordata.get(index).toString(), Toast.LENGTH_LONG).show();
                String dd=doctordata.get(index).toString();
+            Toast.makeText(getBaseContext(), dd, Toast.LENGTH_LONG).show();
         }
 
 
