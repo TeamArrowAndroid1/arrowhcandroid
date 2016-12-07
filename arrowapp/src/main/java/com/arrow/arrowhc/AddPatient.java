@@ -12,10 +12,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
@@ -23,16 +25,19 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 public class AddPatient extends AppCompatActivity {
 TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
     String nurses[],doctors[];String daa;String  rurl;int p=0,q=0; String da=""; String proofile="";String nurse_name="";String doc_name="";
     ArrayList<String> aarayListD;Spinner dsppiner,nsppiner;ArrayAdapter<String> adapterD;ArrayAdapter<String> adapterN;
     ArrayList<String> doctordata;ArrayAdapter<CharSequence> depts;ArrayAdapter<CharSequence> rooms;
-    ArrayList<HashMap<String,String>> nursedata;Spinner departs,roomnos;Button saveP;
+    ArrayList<String> nursedata;Spinner departs,roomnos;Button saveP;
+    String patientName,usernameP,paswdP,doctorName,finalDid,docUserName,NurseName,finalNid,NurseUserName,Pdepartment,PRoomNo;
 
     EditText ename,euname,epswd;String docName,docId,dUserName,nurseName,nurseId,nurseUserName,departMent,roomNo;
-
+    String NAME;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,8 +75,8 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
               //  String docy= (String) parent.getItemAtPosition(position);
-                docName=parent.getItemAtPosition(position).toString();
-                Toast.makeText(AddPatient.this, docName, Toast.LENGTH_SHORT).show();
+                doctorName=parent.getItemAtPosition(position).toString();
+               // Toast.makeText(AddPatient.this, docName, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -85,7 +90,7 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //  String docy= (String) parent.getItemAtPosition(position);
                 nurseName=parent.getItemAtPosition(position).toString();
-                Toast.makeText(AddPatient.this, nurseName, Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(AddPatient.this, nurseName, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -97,8 +102,8 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
          departs.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
              @Override
              public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                 departMent=parent.getItemAtPosition(position).toString();
-                 Toast.makeText(AddPatient.this,departMent, Toast.LENGTH_SHORT).show();
+                 Pdepartment=parent.getItemAtPosition(position).toString();
+               //  Toast.makeText(AddPatient.this,departMent, Toast.LENGTH_SHORT).show();
              }
 
              @Override
@@ -110,8 +115,8 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
            roomnos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                @Override
                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                   roomNo=parent.getItemAtPosition(position).toString();
-                   Toast.makeText(AddPatient.this,roomNo, Toast.LENGTH_SHORT).show();
+                   PRoomNo=parent.getItemAtPosition(position).toString();
+                 //  Toast.makeText(AddPatient.this,roomNo, Toast.LENGTH_SHORT).show();
                }
 
                @Override
@@ -160,8 +165,9 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
                                   contact.put("n_data",nurid+","+nurse_name+","+nusername);
                                    String n=contact.get("nname");
                                    String un=contact.get("nuname");
+                                  String nData=contact.get("n_data");
                                   aarayListN.add(n+"(#"+un+")");
-                                  nursedata.add(contact);
+                                  nursedata.add(nData);
                                  // Toast.makeText(AddPatient.this,"data in heap"+ da, Toast.LENGTH_SHORT).show();
 
                               }
@@ -195,7 +201,7 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
                          adapterN.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                          nsppiner.setAdapter(adapterN);
 
-                        Toast.makeText(AddPatient.this, "docotr data list"+doctordata.size(), Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(AddPatient.this, "docotr data list"+doctordata.size(), Toast.LENGTH_SHORT).show();
 
 
                      } catch (Exception e) {
@@ -218,25 +224,71 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
 
     public void newdata()
     {
-          String patientName=ename.getText().toString();
+                 patientName=ename.getText().toString();
+           usernameP=euname.getText().toString();
+          paswdP=epswd.getText().toString();
             //get docname , nurseName,Department,room
-
+           String finalid="";
+           String finalNurseId="";
         int totalElements = doctordata.size();
 
-        System.out.println("ArrayList contains...");
+
         //loop through it
         for(int index=0; index < totalElements; index++)
         {
-            // Toast.makeText(getBaseContext(), doctordata.get(index).toString(), Toast.LENGTH_LONG).show();
+
                String dd=doctordata.get(index).toString();
-            Toast.makeText(getBaseContext(), dd, Toast.LENGTH_LONG).show();
+           // Toast.makeText(getBaseContext(), dd, Toast.LENGTH_LONG).show();
+            String parts[] = dd.split(",");
+
+             String iid=parts[0];
+            String iname=parts[1];
+            String iuname=parts[2];
+
+
+            String nameUsername[]=doctorName.split(Pattern.quote("("));
+             String rawUser=nameUsername[1];
+              String dUName[]=rawUser.split(Pattern.quote("#"));
+            String medioum=dUName[1];
+              String rawUSER[]=medioum.split(Pattern.quote(")"));
+
+             NAME=nameUsername[0];
+             docUserName=rawUSER[0];
+            if(NAME.equalsIgnoreCase(iname) && docUserName.equalsIgnoreCase(iuname))
+            {
+                finalDid=iid;
+               // Toast.makeText(this,"doctor id= " +finalDid, Toast.LENGTH_SHORT).show();
+            }
+          //  Toast.makeText(this, nameUsername[0]+","+finalUserName, Toast.LENGTH_SHORT).show();
+
+
         }
 
+        int nurseelements=nursedata.size();
+        for(int j=0;j<nurseelements;j++)
+        {
+            String nn=nursedata.get(j).toString();
+            String partsN[]=nn.split(",");
+            String niid=partsN[0];
+            String nname=partsN[1];
+            String nuname=partsN[2];
 
+            String nurseUserName[]=nurseName.split(Pattern.quote("("));
+            String rawNUser=nurseUserName[1];
+            String nUName[]=rawNUser.split(Pattern.quote("#"));
+            String medium=nUName[1];
+            String rawNUSER[]=medium.split(Pattern.quote(")"));
 
-                /*
-
-        RequestQueue mRequestQueue = Volley.newRequestQueue(getBaseContext());
+             NurseName=nurseUserName[0];
+             NurseUserName=rawNUSER[0];
+            if(NurseName.equalsIgnoreCase(nname) && NurseUserName.equalsIgnoreCase(nuname))
+            {
+                finalNid=niid;
+              //  Toast.makeText(this, "nurse id"+finalNid, Toast.LENGTH_SHORT).show();
+            }
+        }
+        Toast.makeText(this,"Put"+ paswdP+","+finalDid+","+ doctorName, Toast.LENGTH_LONG).show();
+            RequestQueue mRequestQueue = Volley.newRequestQueue(getBaseContext());
         String url = "https://arrowhc.herokuapp.com/patient";
         StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -254,24 +306,24 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
         }) {
             protected Map<String, String> getParams() {
                 Map<String, String> MyData = new HashMap<String, String>();
-                MyData.put("patient_name", "Ronald"); //Add the data you'd like to send to the server.
-                MyData.put("room_no", "112");
-                MyData.put("username", "ron");
-                MyData.put("password", "her");
-                MyData.put("doc_id", "583dcc7e5a034e0519757672");
-                MyData.put("doc_name", "Dr Luis");
-                MyData.put("doc_username", "luis");
-                MyData.put("department", "Neurology");
-                MyData.put("nurse_id", "583dccc05a034e0519758643");
-                MyData.put("nurse_name", "Nr Laura");
-                MyData.put("nurse_username", "eli");
+                MyData.put("patient_name",patientName); //Add the data you'd like to send to the server.
+                MyData.put("room_no", PRoomNo);
+                MyData.put("username", usernameP);
+                MyData.put("password", paswdP);
+                MyData.put("doc_id", finalDid);
+                MyData.put("doc_name", NAME);
+                MyData.put("doc_username", docUserName);
+                MyData.put("department",Pdepartment);
+                MyData.put("nurse_id",finalNid);
+                MyData.put("nurse_name", NurseName);
+                MyData.put("nurse_username", NurseUserName);
 
                 return MyData;
             }
         };
 
         mRequestQueue.add(MyStringRequest);
-             */
+
     }   //end newdata
 
 }
