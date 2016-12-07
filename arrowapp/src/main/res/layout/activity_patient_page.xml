@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.arrowhc.harry.arrowhc.Patient_page">
+    tools:context="com.arrow.arrowhc.PatientPage">
 
     <Button
         android:text="View"
@@ -38,4 +38,14 @@
         android:layout_marginTop="11dp"
         android:id="@+id/add"
         android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:text="Add Test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add"
+        android:layout_alignEnd="@+id/add"
+        android:layout_marginTop="36dp"
+        android:id="@+id/buttonTest"
+        style="@style/Widget.AppCompat.Button" />
 </RelativeLayout>
