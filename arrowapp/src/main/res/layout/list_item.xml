@@ -16,7 +16,7 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nurse"
+        android:id="@+id/nrse"
         android:layout_below="@+id/patient"
         />
 
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/room"
-        android:layout_below="@+id/nurse"
+        android:layout_below="@+id/nrse"
         />
     <TextView
         android:textSize="10dp"

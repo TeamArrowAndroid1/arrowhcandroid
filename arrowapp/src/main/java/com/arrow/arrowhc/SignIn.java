@@ -59,6 +59,7 @@ EditText user,paswd;Button sign_in;RequestQueue requestQueue;
                                                 intent.putExtra("name", name);
                                                 intent.putExtra("_id", id);
                                                 startActivity(intent);
+                                                overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
                                             }
                                             else if(profile.equalsIgnoreCase("patient"))
                                             {
@@ -66,6 +67,7 @@ EditText user,paswd;Button sign_in;RequestQueue requestQueue;
                                                 intent.putExtra("name", name);
                                                 intent.putExtra("_id", id);
                                                 startActivity(intent);
+                                                overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
                                             }
                                         }
                                         else

@@ -8,8 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.arrowhc.harry.arrowhc.Sign_In"
-    android:background="@drawable/first_bg">
+    tools:context="com.arrow.arrowhc.SignIn"
+    android:background="@drawable/bg">
 
 
     <EditText
@@ -25,7 +25,9 @@
         android:hint="Username" />
 
     <Button
-        android:background="@drawable/sign_in_b"
+        android:text="Sign In"
+        android:textSize="35dp"
+        android:background="@drawable/search_b"
         android:layout_width="250dp"
         android:layout_height="65dp"
         android:layout_below="@+id/pswd"

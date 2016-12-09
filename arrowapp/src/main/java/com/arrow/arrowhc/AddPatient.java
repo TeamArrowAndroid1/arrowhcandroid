@@ -326,4 +326,12 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
 
     }   //end newdata
 
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
+
+    }
 }
