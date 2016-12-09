@@ -10,4 +10,105 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.arrow.arrowhc.AddTest">
 
+    <TextView
+        android:text="Patient Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tvName" />
+
+    <TextView
+        android:text="Cholesterol:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCholesterol"
+        android:layout_alignBaseline="@+id/etCholesterol"
+        android:layout_alignBottom="@+id/etCholesterol"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etCholesterol"
+        android:singleLine="true"
+        android:layout_below="@+id/etBlood"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Heart Rate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHeart"
+        android:layout_alignBaseline="@+id/etHeart"
+        android:layout_alignBottom="@+id/etHeart"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etHeart"
+        android:singleLine="true"
+        android:layout_below="@+id/etCholesterol"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Temperature:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTemperature"
+        android:layout_alignBaseline="@+id/etTemperature"
+        android:layout_alignBottom="@+id/etTemperature"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etTemperature"
+        android:singleLine="true"
+        android:layout_below="@+id/etHeart"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/etBlood"
+        android:layout_marginStart="144dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etBlood"
+        android:singleLine="true"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Blood Presure:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBlood"
+        android:layout_alignBaseline="@+id/etBlood"
+        android:layout_alignBottom="@+id/etBlood"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTemperature"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2" />
+
 </RelativeLayout>

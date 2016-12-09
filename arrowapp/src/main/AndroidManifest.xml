@@ -24,7 +24,8 @@
         <activity android:name=".PatientView" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".PatientPage" />
-        <activity android:name=".AddTest"></activity>
+        <activity android:name=".AddTest"
+            android:parentActivityName=".PatientPage" />
     </application>
 
 </manifest>

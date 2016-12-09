@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Arrowhc</string>
+    <string name="app_name">ArrowHC</string>
     <string-array name="departments">
         <item>Cardiology</item>
         <item>Neurology</item>
