@@ -17,15 +17,16 @@
         android:hint="Department Name"
         android:textColor="@color/colorAccent"/>
 
-    <ImageButton
+    <Button
 
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="35dp"
         android:layout_marginTop="34dp"
         android:id="@+id/by_d"
         android:layout_below="@+id/by_dept"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/search_cc"/>
+        android:background="@drawable/search_b"
+        android:text="SEARCH"/>
 
     <ListView
         android:layout_width="match_parent"

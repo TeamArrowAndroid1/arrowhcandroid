@@ -31,7 +31,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static com.arrow.arrowhc.R.id.search;
+
 
 public class SearchActivity extends AppCompatActivity {
 TabLayout tabLayout;ArrayList<HashMap<String,String>> arayList;
@@ -102,5 +102,9 @@ TabLayout tabLayout;ArrayList<HashMap<String,String>> arayList;
     }
 
 
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
+    }
 }

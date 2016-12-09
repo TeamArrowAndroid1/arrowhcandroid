@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
@@ -31,7 +32,7 @@ import java.util.HashMap;
  * Created by Harry on 2016-12-01.
  */
 public class Fragment2 extends Fragment {
-EditText e2;ImageButton searchb;ArrayList<HashMap<String,String>> arrryList;RequestQueue requestQueue;
+EditText e2;Button searchb;ArrayList<HashMap<String,String>> arrryList;RequestQueue requestQueue;
     ListView ls;
     @Nullable
     @Override
@@ -40,7 +41,7 @@ EditText e2;ImageButton searchb;ArrayList<HashMap<String,String>> arrryList;Requ
         requestQueue= Volley.newRequestQueue(getContext());
         arrryList=new ArrayList<>();
         e2=(EditText)v.findViewById(R.id.by_dept);
-        searchb=(ImageButton)v.findViewById(R.id.by_d);
+        searchb=(Button)v.findViewById(R.id.by_d);
         ls=(ListView)v.findViewById(R.id.frag_two_l);
 
         searchb.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +114,7 @@ EditText e2;ImageButton searchb;ArrayList<HashMap<String,String>> arrryList;Requ
                                             getActivity(), arrryList,
                                             R.layout.list_item, new String[]{"namee", "nursee", "didd",
                                             "roomm", "dept"}, new int[]{R.id.patient,
-                                            R.id.doctor, R.id.nurse, R.id.room, R.id.dept});
+                                            R.id.doctor, R.id.nrse, R.id.room, R.id.dept});
 
                                     ls.setAdapter(adapter);
                                 }

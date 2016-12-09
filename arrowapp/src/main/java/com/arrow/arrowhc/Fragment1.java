@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -122,7 +121,7 @@ public class Fragment1 extends Fragment {
                                             getActivity(), arayList,
                                             R.layout.list_item, new String[]{"namee", "nursee", "didd",
                                             "roomm", "dept"}, new int[]{R.id.patient,
-                                            R.id.doctor, R.id.nurse, R.id.room, R.id.dept});
+                                            R.id.doctor, R.id.nrse, R.id.room, R.id.dept});
 
                                     list.setAdapter(adapter);
                                 }

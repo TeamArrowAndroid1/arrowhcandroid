@@ -19,14 +19,14 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-
+        android:text="SEARCH"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="34dp"
         android:id="@+id/by_n"
         android:layout_below="@+id/by_name"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/search_cc"
+        android:background="@drawable/search_b"
        />
 
     <ListView

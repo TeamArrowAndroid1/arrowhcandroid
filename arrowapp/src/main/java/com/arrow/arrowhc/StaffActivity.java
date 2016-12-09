@@ -19,6 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -30,13 +32,34 @@ public class StaffActivity extends AppCompatActivity {
     TextView tv;ListView lv;ArrayList<HashMap<String,String>> arrayList;String id,name;
     RequestQueue requestQueue;
     ImageButton searchb;Button addb;
+    FloatingActionMenu materialDesignFAM;
+    FloatingActionButton floatingActionButton1, floatingActionButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_);
-        searchb=(ImageButton)findViewById(R.id.search);
-         addb=(Button)findViewById(R.id.add);
+        floatingActionButton1=(FloatingActionButton)findViewById(R.id.searching);
+        floatingActionButton2=(FloatingActionButton)findViewById(R.id.adding);
+        floatingActionButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getBaseContext(),SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        floatingActionButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getBaseContext(),AddPatient.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
+            }
+        });
+
+
+
         //initialize requestqueue && Arraylist
         requestQueue= Volley.newRequestQueue(getBaseContext());
         arrayList=new ArrayList<>();
@@ -63,7 +86,7 @@ public class StaffActivity extends AppCompatActivity {
                         intent.putExtra("id",iiid);
                         intent.putExtra("name", name);
                 startActivity(intent);
-
+                overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
             }
         });
 
@@ -117,7 +140,7 @@ public class StaffActivity extends AppCompatActivity {
                                         StaffActivity.this, arrayList,
                                         R.layout.list_item, new String[]{"namee","nursee","didd",
                                         "roomm","dept"}, new int[]{R.id.patient,
-                                        R.id.doctor, R.id.nurse,R.id.room,R.id.dept});
+                                        R.id.doctor, R.id.nrse,R.id.room,R.id.dept});
 
                                 lv.setAdapter(adapter);
 
@@ -140,15 +163,15 @@ public class StaffActivity extends AppCompatActivity {
         requestQueue.add(req);
 
     }
-    public void search_panel(View view)
-    {
-        Intent intent=new Intent(getBaseContext(),SearchActivity.class);
-        startActivity(intent);
-    }
-    public void addPatient(View view)
-    {
-        Intent intent=new Intent(getBaseContext(),AddPatient.class);
-        startActivity(intent);
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
     }
 
+    @Override
+    public void onBackPressed() {
+      //  super.onBackPressed();
+    }
 }
