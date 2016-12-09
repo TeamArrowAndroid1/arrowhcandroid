@@ -38,4 +38,14 @@
         android:layout_marginTop="11dp"
         android:id="@+id/add"
         android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:text="Add Test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add"
+        android:layout_alignEnd="@+id/add"
+        android:layout_marginTop="36dp"
+        android:id="@+id/buttonTest"
+        style="@style/Widget.AppCompat.Button" />
 </RelativeLayout>

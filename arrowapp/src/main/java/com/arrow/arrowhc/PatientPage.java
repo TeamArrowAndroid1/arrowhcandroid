@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class PatientPage extends AppCompatActivity {
 
-    Button add,view,delete;View v; String id;
+    Button add,view,delete,test;View v; String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,8 @@ public class PatientPage extends AppCompatActivity {
         add=(Button)findViewById(R.id.add);
         view=(Button)findViewById(R.id.viewp);
         delete=(Button)findViewById(R.id.deletep);
+
+        test=(Button)findViewById(R.id.buttonTest);
 
         //if there is no paitent id
            view.setVisibility(v.GONE);
@@ -30,6 +32,16 @@ public class PatientPage extends AppCompatActivity {
                startActivity(intent);
             }
         });
+
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getBaseContext(),AddTest.class);
+                intent.putExtra("id",id);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
