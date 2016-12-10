@@ -63,8 +63,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/pswd"
             android:textColor="@color/black"
+
             android:hint="PASSWORD"
-            />
+            android:inputType="textPassword" />
     </android.support.design.widget.TextInputLayout>
 
     <Button

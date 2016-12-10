@@ -2,9 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back">
+    android:background="@color/white">
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/searcheable_"
+        android:layout_marginTop="20dp"
 
+        android:layout_centerHorizontal="true"
+        >
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -15,15 +22,16 @@
         android:layout_marginTop="34dp"
         android:id="@+id/by_dept"
         android:hint="Department Name"
-        android:textColor="@color/colorAccent"/>
-
+        android:textColor="@color/bg"
+        android:textColorHint="@color/textBg"/>
+</android.support.design.widget.TextInputLayout>
     <Button
 
         android:layout_width="100dp"
         android:layout_height="35dp"
         android:layout_marginTop="34dp"
         android:id="@+id/by_d"
-        android:layout_below="@+id/by_dept"
+        android:layout_below="@+id/searcheable_"
         android:layout_centerHorizontal="true"
         android:background="@drawable/search_b"
         android:text="SEARCH"/>
@@ -32,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/frag_two_l"
-        android:background="@color/white"
+        android:background="@color/bg"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/by_d"
