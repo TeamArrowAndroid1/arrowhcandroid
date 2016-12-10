@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.github.clans.fab.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -31,7 +32,8 @@ public class PatientPage extends AppCompatActivity {
     ArrayList<HashMap<String,String>> arrayList;
     RequestQueue requestQueue;
 
-    Button add,view,delete,test;View v;
+    Button add,view,delete;View v;
+    FloatingActionButton test;
     String id, patientName;
 
     @Override
@@ -53,15 +55,15 @@ public class PatientPage extends AppCompatActivity {
         tv = (TextView) findViewById(R.id.textView);
         tv.setText(patientName);
 
-        add=(Button)findViewById(R.id.add);
-        view=(Button)findViewById(R.id.viewp);
-        delete=(Button)findViewById(R.id.deletep);
+        //add=(Button)findViewById(R.id.add);
+        //view=(Button)findViewById(R.id.viewp);
+        //delete=(Button)findViewById(R.id.deletep);
 
-        test=(Button)findViewById(R.id.addTest);
+        test=(FloatingActionButton)findViewById(R.id.addTest);
 
         //if there is no paitent id
-           view.setVisibility(v.GONE);
-
+        //   view.setVisibility(v.GONE);
+/*
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,6 +72,7 @@ public class PatientPage extends AppCompatActivity {
                startActivity(intent);
             }
         });
+*/
 
         test.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,9 +96,7 @@ public class PatientPage extends AppCompatActivity {
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        //String da="";
 
-                        //  Toast.makeText(StaffActivity.this, url, Toast.LENGTH_SHORT).show();
                         try {
                             for (int i = 0; i <response.length(); i++) {
 
@@ -106,7 +107,7 @@ public class PatientPage extends AppCompatActivity {
                                 String heart = jresponse.getString("heart_rate");
                                 String temperature = jresponse.getString("temperature");
                                 String testdate = jresponse.getString("date");
-                                //Toast.makeText(PatientPage.this,testdate, Toast.LENGTH_SHORT).show();
+
                                 HashMap<String,String> contact = new HashMap<>();
 
                                 contact.put("date",testdate);
@@ -122,6 +123,7 @@ public class PatientPage extends AppCompatActivity {
                                         R.id.cholesterol,R.id.heart,R.id.temperature});
 
                                 lv.setAdapter(adapter);
+
 
                             }
 
