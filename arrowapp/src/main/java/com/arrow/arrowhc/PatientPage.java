@@ -1,6 +1,7 @@
 package com.arrow.arrowhc;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +39,9 @@ public class PatientPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_page);
 
+        ActionBar ab = getSupportActionBar();
+        ab.setDefaultDisplayHomeAsUpEnabled(true);
+
         requestQueue= Volley.newRequestQueue(getBaseContext());
         arrayList=new ArrayList<>();
         lv=(ListView)findViewById(R.id.list);
@@ -47,7 +51,7 @@ public class PatientPage extends AppCompatActivity {
 
         //Toast.makeText(getBaseContext(), id, Toast.LENGTH_SHORT).show();
         tv = (TextView) findViewById(R.id.textView);
-        tv.setText(id);
+        tv.setText(patientName);
 
         add=(Button)findViewById(R.id.add);
         view=(Button)findViewById(R.id.viewp);
@@ -102,7 +106,7 @@ public class PatientPage extends AppCompatActivity {
                                 String heart = jresponse.getString("heart_rate");
                                 String temperature = jresponse.getString("temperature");
                                 String testdate = jresponse.getString("date");
-                                Toast.makeText(PatientPage.this,testdate, Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(PatientPage.this,testdate, Toast.LENGTH_SHORT).show();
                                 HashMap<String,String> contact = new HashMap<>();
 
                                 contact.put("date",testdate);
