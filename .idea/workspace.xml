@@ -10,20 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2de29b60-26d4-471b-9e99-6d1d98c7b094" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_arrowapp_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/AddPatient.java" afterPath="$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/AddPatient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/SignIn.java" afterPath="$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/SignIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/StaffActivity.java" afterPath="$PROJECT_DIR$/arrowapp/src/main/java/com/arrow/arrowhc/StaffActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrowapp/src/main/res/layout/activity_add__patient.xml" afterPath="$PROJECT_DIR$/arrowapp/src/main/res/layout/activity_add__patient.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrowapp/src/main/res/layout/activity_sign__in.xml" afterPath="$PROJECT_DIR$/arrowapp/src/main/res/layout/activity_sign__in.xml" />
     </list>
     <list id="9589567c-0be2-4292-af23-878603414386" name="Rejected commit: Default" comment="Passing parameters to Add Test Activity" />
     <ignored path="arrowhcandroid.iws" />
@@ -3322,7 +3309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481404347299</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="nurse data settings">
+      <created>1481412995826</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1481412995826</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3415,7 +3409,8 @@
     <MESSAGE value="Adding Test List and Add Test Activity" />
     <MESSAGE value="Workin on layouts" />
     <MESSAGE value="Workin on layouts 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workin on layouts 3" />
+    <MESSAGE value="nurse data settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="nurse data settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
