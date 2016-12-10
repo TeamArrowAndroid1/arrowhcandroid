@@ -31,7 +31,7 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:textSize="10dp"
+        android:textSize="13dp"
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         android:layout_below="@+id/textView1"
         />
     <TextView
-        android:textSize="10dp"
+        android:textSize="13dp"
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         android:id="@+id/textView6" />
 
     <TextView
-        android:textSize="10dp"
+        android:textSize="13dp"
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
         android:id="@+id/heart" />
 
     <TextView
-        android:textSize="10dp"
+        android:textSize="13dp"
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
