@@ -51,12 +51,6 @@ public class AddTest extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*
-                Intent intent=new Intent(getBaseContext(),AddTest.class);
-                intent.putExtra("id",sPatienId);
-                startActivity(intent);
-                */
-
                 EditText etCholesterol = (EditText) findViewById(R.id.etCholesterol);
                 EditText etTemperature = (EditText) findViewById(R.id.etTemperature);
                 EditText etBlood = (EditText) findViewById(R.id.etBlood);
@@ -107,22 +101,13 @@ public class AddTest extends AppCompatActivity {
 
                 mRequestQueue.add(MyStringRequest);
 
+                Intent intent=new Intent(getBaseContext(),PatientPage.class);
+                intent.putExtra("id",sPatienId);
+                startActivity(intent);
 
             }
         });
 
     }
-    /*
-    @Override
-    public void onBackPressed() {
 
-        String sPatienId = getIntent().getStringExtra("id");
-
-        Intent intent=new Intent(getBaseContext(),AddTest.class);
-        intent.putExtra("id",sPatienId);
-        startActivity(intent);
-
-        return;
-    }
-    */
 }
