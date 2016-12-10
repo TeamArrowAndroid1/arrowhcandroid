@@ -30,7 +30,6 @@
         android:id="@+id/pname"
         android:hint="NAME" />
 
-
     <Spinner
         android:layout_width="150dp"
         android:layout_height="wrap_content"

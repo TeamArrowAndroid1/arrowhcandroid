@@ -84,6 +84,7 @@ public class StaffActivity extends AppCompatActivity {
                 String iiid=arrayList.get(position).get("id");
                     Intent intent=new Intent(getBaseContext(),PatientPage.class);
                         intent.putExtra("id",iiid);
+                        intent.putExtra("name", name);
                 startActivity(intent);
                 overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
             }
@@ -127,7 +128,7 @@ public class StaffActivity extends AppCompatActivity {
                                 contact.put("dept",deptt);
                                 contact.put("id",pid);
                               //  da=contact.get("namee");
-                                Toast.makeText(StaffActivity.this,da, Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(StaffActivity.this,da, Toast.LENGTH_SHORT).show();
 
                                 //Toast.makeText(SignIn.this, name+","+usern+","+pswd, Toast.LENGTH_SHORT).show();
 
