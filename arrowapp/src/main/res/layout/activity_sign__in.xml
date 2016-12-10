@@ -8,39 +8,73 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.arrowhc.harry.arrowhc.Sign_In"
-    android:background="@drawable/first_bg">
+    tools:context="com.arrow.arrowhc.SignIn"
+    android:background="@color/white">
 
 
-    <EditText
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="170dp"
+        android:src="@drawable/animation"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/logoname"
+        android:layout_width="188dp"
+        android:layout_height="50dp"
+        android:src="@drawable/arrowhealth"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-
-      style="@style/text_field"
-        android:layout_alignParentTop="true"
+        android:id="@+id/etlayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="230dp"
-        android:id="@+id/usern"
-        android:hint="Username" />
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/logoname"
+        android:textColorHint="@color/black">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/usern"
+            android:textColor="@color/black"
+            android:hint="USERNAME"
+
+             />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etlayout2"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/etlayout"
+        android:layout_centerHorizontal="true"
+        >
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pswd"
+            android:textColor="@color/black"
+            android:hint="PASSWORD"
+            />
+    </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:background="@drawable/sign_in_b"
-        android:layout_width="250dp"
-        android:layout_height="65dp"
-        android:layout_below="@+id/pswd"
+        android:textSize="35dp"
+        android:text="SIGN IN"
+        android:layout_width="270dp"
+        android:layout_height="70dp"
+        android:id="@+id/button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:id="@+id/button" />
-
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        style="@style/text_field"
-        android:layout_marginTop="50dp"
-        android:id="@+id/pswd"
-        android:layout_below="@+id/usern"
-        android:layout_centerHorizontal="true"
-        android:hint="Password" />
+        android:layout_below="@+id/etlayout2"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/search_b"/>
 </RelativeLayout>
