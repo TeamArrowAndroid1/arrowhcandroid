@@ -36,13 +36,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/logoname"
-        android:textColorHint="@color/black">
+        android:textColorHint="@color/bg">
 
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/usern"
-            android:textColor="@color/black"
+            android:textColor="@color/bg"
             android:hint="USERNAME"
 
              />
@@ -56,13 +56,14 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/etlayout"
         android:layout_centerHorizontal="true"
+        android:textColorHint="@color/bg"
         >
 
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/pswd"
-            android:textColor="@color/black"
+            android:textColor="@color/bg"
 
             android:hint="PASSWORD"
             android:inputType="textPassword" />

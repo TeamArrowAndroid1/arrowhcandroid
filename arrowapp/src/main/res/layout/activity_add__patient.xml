@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/show"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/bg"/>
 
     <EditText
         android:layout_width="350dp"

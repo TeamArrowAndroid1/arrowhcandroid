@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class StaffActivity extends AppCompatActivity {
-    TextView tv;ListView lv;ArrayList<HashMap<String,String>> arrayList;String id,name;
+    TextView tv;ListView lv;ArrayList<HashMap<String,String>> arrayList;String id,name, profile;
     RequestQueue requestQueue;
     ImageButton searchb;Button addb;
     FloatingActionMenu materialDesignFAM;
@@ -66,7 +66,8 @@ public class StaffActivity extends AppCompatActivity {
         lv=(ListView)findViewById(R.id.list) ;
         tv=(TextView)findViewById(R.id.textView);
         tv.setText("hlo!");
-         id=getIntent().getStringExtra("_id");
+         id=getIntent().getStringExtra("_id");   //Doctor id to search for patients
+        profile=getIntent().getStringExtra("profile");   //Doctor id to search for patients
         name=getIntent().getStringExtra("name");
         if(id!=null)
         {
@@ -98,70 +99,77 @@ public class StaffActivity extends AppCompatActivity {
 //https://arrowhc.herokuapp.com/patient
     public void data()
     {
-        String  rurl="https://arrowhc.herokuapp.com/doctorpatients/"+id;
-
-        //Toast.makeText(StaffActivity.this,rurl, Toast.LENGTH_SHORT).show();
-        JsonArrayRequest req = new JsonArrayRequest(rurl,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        String da="";
-
-                      //  Toast.makeText(StaffActivity.this, url, Toast.LENGTH_SHORT).show();
-                        try {
-                            for (int i = 0; i <response.length(); i++) {
-                                JSONObject jresponse = response.getJSONObject(i);
-                                String name = jresponse.getString("patient_name");
-                                String did = jresponse.getString("doc_name");
-                                String nurse= jresponse.getString("nurse_name");
-                                String room = jresponse.getString("room_no");
-                                String deptt=jresponse.getString("department");
-                                String pid=jresponse.getString("_id");
-                                //  da=da+name+","+did;
-                                //  String dept = jresponse.getString("department");
-                                HashMap<String,String> contact = new HashMap<>();
-
-                                contact.put("namee",name);
-                                contact.put("didd",did);
-                                contact.put("nursee",nurse);
-                                contact.put("roomm",room);
-                                contact.put("dept",deptt);
-                                contact.put("id",pid);
-                              //  da=contact.get("namee");
-                                //Toast.makeText(StaffActivity.this,da, Toast.LENGTH_SHORT).show();
-
-                                //Toast.makeText(SignIn.this, name+","+usern+","+pswd, Toast.LENGTH_SHORT).show();
-
-                                // Toast.makeText(Staff_Data.this, id, Toast.LENGTH_SHORT).show();
-                                //  Toast.makeText(MainActivity.this, rurl, Toast.LENGTH_LONG).show();
-                                // Log.d("nickname",nickname);
-                                arrayList.add(contact);
-                                ListAdapter adapter = new SimpleAdapter(
-                                        StaffActivity.this, arrayList,
-                                        R.layout.list_item, new String[]{"namee","nursee","didd",
-                                        "roomm","dept"}, new int[]{R.id.patient,
-                                        R.id.doctor, R.id.nrse,R.id.room,R.id.dept});
-
-                                lv.setAdapter(adapter);
-
-                            }
-
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-
-
-                    }
-
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("Volley", "Error");
-            }
+        String rurl="";
+        if (profile.equalsIgnoreCase("doctor")){
+           rurl="https://arrowhc.herokuapp.com/doctorpatients/"+id;
         }
-        );
-        requestQueue.add(req);
+        else if(profile.equalsIgnoreCase("nurse"))
+        {
+             rurl="https://arrowhc.herokuapp.com/nursepatients/"+id;
+        }
+             if(rurl!=null) {
+                 //Toast.makeText(StaffActivity.this,rurl, Toast.LENGTH_SHORT).show();
+                 JsonArrayRequest req = new JsonArrayRequest(rurl,
+                         new Response.Listener<JSONArray>() {
+                             @Override
+                             public void onResponse(JSONArray response) {
+                                 String da = "";
 
+                                 //  Toast.makeText(StaffActivity.this, url, Toast.LENGTH_SHORT).show();
+                                 try {
+                                     for (int i = 0; i < response.length(); i++) {
+                                         JSONObject jresponse = response.getJSONObject(i);
+                                         String name = jresponse.getString("patient_name");
+                                         String did = jresponse.getString("doc_name");
+                                         String nurse = jresponse.getString("nurse_name");
+                                         String room = jresponse.getString("room_no");
+                                         String deptt = jresponse.getString("department");
+                                         String pid = jresponse.getString("_id");
+                                         //  da=da+name+","+did;
+                                         //  String dept = jresponse.getString("department");
+                                         HashMap<String, String> contact = new HashMap<>();
+
+                                         contact.put("namee", name);
+                                         contact.put("didd", did);
+                                         contact.put("nursee", nurse);
+                                         contact.put("roomm", room);
+                                         contact.put("dept", deptt);
+                                         contact.put("id", pid);
+                                         //  da=contact.get("namee");
+                                         //Toast.makeText(StaffActivity.this,da, Toast.LENGTH_SHORT).show();
+
+                                         //Toast.makeText(SignIn.this, name+","+usern+","+pswd, Toast.LENGTH_SHORT).show();
+
+                                         // Toast.makeText(Staff_Data.this, id, Toast.LENGTH_SHORT).show();
+                                         //  Toast.makeText(MainActivity.this, rurl, Toast.LENGTH_LONG).show();
+                                         // Log.d("nickname",nickname);
+                                         arrayList.add(contact);
+                                         ListAdapter adapter = new SimpleAdapter(
+                                                 StaffActivity.this, arrayList,
+                                                 R.layout.list_item, new String[]{"namee", "nursee", "didd",
+                                                 "roomm", "dept"}, new int[]{R.id.patient,
+                                                 R.id.doctor, R.id.nrse, R.id.room, R.id.dept});
+
+                                         lv.setAdapter(adapter);
+
+                                     }
+
+                                 } catch (Exception e) {
+                                     e.printStackTrace();
+                                 }
+
+
+                             }
+
+                         }, new Response.ErrorListener() {
+                     @Override
+                     public void onErrorResponse(VolleyError error) {
+                         Log.e("Volley", "Error");
+                     }
+                 }
+                 );
+                 requestQueue.add(req);
+             }
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.arrow.arrowhc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -129,6 +130,11 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
             @Override
             public void onClick(View v) {
                 newdata();  //save patient data
+
+                Intent intent=new Intent(getBaseContext(),StaffActivity.class);
+
+
+
             }
         });
     }
