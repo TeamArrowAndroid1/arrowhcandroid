@@ -39,6 +39,15 @@ public class StaffActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_);
+
+
+        id=getIntent().getStringExtra("_id");   //Doctor id to search for patients
+        profile=getIntent().getStringExtra("profile");   //Doctor id to search for patients
+        name=getIntent().getStringExtra("name");
+
+        Toast.makeText(getBaseContext(), "data is "+name, Toast.LENGTH_SHORT).show();
+
+
         floatingActionButton1=(FloatingActionButton)findViewById(R.id.searching);
         floatingActionButton2=(FloatingActionButton)findViewById(R.id.adding);
         floatingActionButton1.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +62,9 @@ public class StaffActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(),AddPatient.class);
+                intent.putExtra("id", id);
+                intent.putExtra("profile", profile);
+                intent.putExtra("name", name);
                 startActivity(intent);
                 overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
             }
@@ -66,9 +78,7 @@ public class StaffActivity extends AppCompatActivity {
         lv=(ListView)findViewById(R.id.list) ;
         tv=(TextView)findViewById(R.id.textView);
         tv.setText("hlo!");
-         id=getIntent().getStringExtra("_id");   //Doctor id to search for patients
-        profile=getIntent().getStringExtra("profile");   //Doctor id to search for patients
-        name=getIntent().getStringExtra("name");
+
         if(id!=null)
         {
             tv.setText(name);

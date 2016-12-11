@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
 
 public class AddPatient extends AppCompatActivity {
 TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
-    String nurses[],doctors[];String daa;String  rurl;int p=0,q=0; String da=""; String proofile="";String nurse_name="";String doc_name="";
+    String nurses[],doctors[];String daa;String  rurl;int p=0,q=0; String id=""; String profile="";String name="";String doc_name="";
     ArrayList<String> aarayListD;Spinner dsppiner,nsppiner;ArrayAdapter<String> adapterD;ArrayAdapter<String> adapterN;
     ArrayList<String> doctordata;ArrayAdapter<CharSequence> depts;ArrayAdapter<CharSequence> rooms;
     ArrayList<String> nursedata;Spinner departs,roomnos;Button saveP;
@@ -43,6 +43,13 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__patient);
+
+        id=getIntent().getStringExtra("id");   //Doctor id to search for patients
+        profile=getIntent().getStringExtra("profile");   //Doctor id to search for patients
+        name=getIntent().getStringExtra("name");
+
+
+        Toast.makeText(this, name + " " + profile, Toast.LENGTH_SHORT).show();
         requestQueue= Volley.newRequestQueue(getBaseContext());
         doctordata=new ArrayList<>();
         nursedata=new ArrayList<>();
@@ -130,11 +137,14 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
             @Override
             public void onClick(View v) {
                 newdata();  //save patient data
+                if(id!=null && profile!=null) {
+                    Intent intent = new Intent(getBaseContext(), StaffActivity.class);
+                    intent.putExtra("_id", id);
+                    intent.putExtra("profile", profile);
+                    intent.putExtra("name", name);
+                    startActivity(intent);
 
-                Intent intent=new Intent(getBaseContext(),StaffActivity.class);
-
-
-
+                }
             }
         });
     }
