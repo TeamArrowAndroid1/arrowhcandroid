@@ -334,6 +334,9 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
                 MyData.put("nurse_name", NurseName);
                 MyData.put("nurse_username", NurseUserName);
 
+                MyData.put("name", patientName);
+                MyData.put("profile", "patient");
+
                 return MyData;
             }
         };

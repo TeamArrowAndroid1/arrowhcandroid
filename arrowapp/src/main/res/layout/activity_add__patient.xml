@@ -19,7 +19,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="@color/bg"/>
-
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        ></android.support.design.widget.TextInputLayout>
     <EditText
         android:layout_width="350dp"
         android:layout_height="wrap_content"

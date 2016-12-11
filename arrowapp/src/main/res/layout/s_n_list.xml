@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,44 +9,101 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/patientn"
+        android:id="@+id/datee"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"/>
-    <TextView
-        android:textSize="15dp"
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/nursen"
-        android:layout_below="@+id/patient"
-        />
 
     <TextView
-        android:textSize="15dp"
-        android:text="TextView"
+        android:text="BLOOD PRESSURE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/doctorn"
-        android:layout_below="@+id/patient"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/datee"
+        android:layout_toStartOf="@+id/datee"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textblood"
+        android:paddingLeft="5dp"/>
 
     <TextView
-        android:textSize="15dp"
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/roomn"
-        android:layout_below="@+id/nrse"
-        />
+        android:layout_alignBottom="@+id/textblood"
+        android:layout_toEndOf="@+id/textblood"
+        android:layout_marginStart="73dp"
+        android:id="@+id/bP"
+        tools:text="BP" />
+
     <TextView
-        android:textSize="10dp"
+        android:text="CHOLESTEROL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textblood"
+        android:layout_alignStart="@+id/textblood"
+        android:layout_marginTop="26dp"
+        android:id="@+id/textView11"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:text="Cholestrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_alignStart="@+id/bP"
+        android:id="@+id/chol" />
+
+    <TextView
+        android:text="HEART RATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView11"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView14"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:text="TEMPERATURE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView14"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView17"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:text="Heart Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heartrate"
+        android:layout_above="@+id/textView17"
+        android:layout_alignStart="@+id/chol" />
+
+    <TextView
+        android:text="Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignStart="@+id/temperatue"
+        android:id="@+id/date" />
+
+    <TextView
+        android:text="DATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/textView17" />
+
+    <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/deptn"
-        android:layout_below="@+id/doctor"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/temperatue"
+        tools:text="Temperature"
+        android:layout_alignBaseline="@+id/textView17"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_alignStart="@+id/heartrate" />
+
 
 </RelativeLayout>
