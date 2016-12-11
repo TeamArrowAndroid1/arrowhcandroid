@@ -103,6 +103,7 @@ public class AddTest extends AppCompatActivity {
 
                 Intent intent=new Intent(getBaseContext(),PatientPage.class);
                 intent.putExtra("id",sPatienId);
+                intent.putExtra("name",sPatientName);
                 startActivity(intent);
 
             }

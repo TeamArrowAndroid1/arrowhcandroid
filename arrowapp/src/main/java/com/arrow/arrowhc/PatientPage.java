@@ -32,7 +32,6 @@ public class PatientPage extends AppCompatActivity {
     ArrayList<HashMap<String,String>> arrayList;
     RequestQueue requestQueue;
 
-    Button add,view,delete;View v;
     FloatingActionButton test;
     String id, patientName;
 
@@ -60,19 +59,6 @@ public class PatientPage extends AppCompatActivity {
         //delete=(Button)findViewById(R.id.deletep);
 
         test=(FloatingActionButton)findViewById(R.id.addTest);
-
-        //if there is no paitent id
-        //   view.setVisibility(v.GONE);
-/*
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getBaseContext(),AddPatient.class);
-                intent.putExtra("id",id);
-               startActivity(intent);
-            }
-        });
-*/
 
         test.setOnClickListener(new View.OnClickListener() {
             @Override
