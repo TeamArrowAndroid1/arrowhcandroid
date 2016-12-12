@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -50,13 +49,8 @@ public class PatientPage extends AppCompatActivity {
         id=getIntent().getStringExtra("id");
         patientName=getIntent().getStringExtra("name");
 
-        //Toast.makeText(getBaseContext(), id, Toast.LENGTH_SHORT).show();
         tv = (TextView) findViewById(R.id.textView);
         tv.setText(patientName);
-
-        //add=(Button)findViewById(R.id.add);
-        //view=(Button)findViewById(R.id.viewp);
-        //delete=(Button)findViewById(R.id.deletep);
 
         test=(FloatingActionButton)findViewById(R.id.addTest);
 

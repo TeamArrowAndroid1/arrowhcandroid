@@ -66,7 +66,8 @@ EditText user,paswd;Button sign_in;RequestQueue requestQueue;
                                             {
                                                 Intent intent = new Intent(getBaseContext(), PatientView.class);
                                                 intent.putExtra("name", name);
-                                                intent.putExtra("_id", id);
+                                                intent.putExtra("id", id);
+                                                intent.putExtra("username", usern);
                                                 startActivity(intent);
                                                 overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
                                             }

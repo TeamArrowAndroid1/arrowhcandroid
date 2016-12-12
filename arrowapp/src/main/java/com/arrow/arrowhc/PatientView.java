@@ -24,10 +24,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PatientView extends AppCompatActivity {
-    TextView name,id;
+    TextView tvname,tvid;
     FloatingActionButton f1,f2;
     ListView lv;
-    String _id;
+    String id, username;
     ArrayList<HashMap<String,String>> arrayList;
     RequestQueue requestQueue;
     @Override
@@ -37,109 +37,91 @@ public class PatientView extends AppCompatActivity {
         setContentView(R.layout.activity_patient_view);
 
         requestQueue= Volley.newRequestQueue(getBaseContext());
-        lv=(ListView)findViewById(R.id.new_List);
         arrayList=new ArrayList<>();
+        lv=(ListView)findViewById(R.id.list);
 
 
-        name=(TextView)findViewById(R.id.pname);
-        id=(TextView)findViewById(R.id.idd);
-        _id=getIntent().getStringExtra("_id");
+        tvname=(TextView)findViewById(R.id.pname);
+        tvid=(TextView)findViewById(R.id.idd);
+        //id=getIntent().getStringExtra("id");
+        username=getIntent().getStringExtra("username");
         String namee=getIntent().getStringExtra("name");
 
-        Toast.makeText(this,"i is=" +_id, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
         if(namee!=null)
         {
-            name.setText(namee);
-            id.setText(_id);
+            tvname.setText(namee);
+            //tvid.setText(id);
         }
 
         f1=(FloatingActionButton)findViewById(R.id.callDoc);
         f2=(FloatingActionButton)findViewById(R.id.callNurse);
 
+        id = tvid.getText().toString();
+        Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
+
         data();
+
     }
 
     public void data()
     {
-        String rurl="https://arrowhc.herokuapp.com/test/"+_id;
+        String  rurl="https://arrowhc.herokuapp.com/patient/"+username;
 
-            //Toast.makeText(StaffActivity.this,rurl, Toast.LENGTH_SHORT).show();
-            JsonArrayRequest req = new JsonArrayRequest(rurl,
-                    new Response.Listener<JSONArray>() {
-                        @Override
-                        public void onResponse(JSONArray response) {
-                            String da = "";
+        Toast.makeText(this, PatientView.this.tvid.getText().toString(), Toast.LENGTH_SHORT).show();
 
-                       // Toast.makeText(PatientView.this, rurl, Toast.LENGTH_SHORT).show();
-                            try {
-                                for (int i = 0; i < response.length(); i++) {
+        JsonArrayRequest req = new JsonArrayRequest(rurl,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
 
-                                    JSONObject jresponse = response.getJSONObject(i);
+                        try {
+                            for (int i = 0; i <response.length(); i++) {
 
-                                    String name = jresponse.getString("patient_name");
-                                    String bp = jresponse.getString("blood_presure");
-                                    String chole = jresponse.getString("cholesterol");
-                                    String heart = jresponse.getString("heart_rate");
-                                    String tempi = jresponse.getString("temperature");
-                                    String date = jresponse.getString("date");
+                                JSONObject jresponse = response.getJSONObject(i);
+
+                                String blood = jresponse.getString("blood_presure");
+                                String cholesterol= jresponse.getString("cholesterol");
+                                String heart = jresponse.getString("heart_rate");
+                                String temperature = jresponse.getString("temperature");
+                                String testdate = jresponse.getString("date");
+
+                                HashMap<String,String> contact = new HashMap<>();
+
+                                contact.put("date",testdate);
+                                contact.put("blood",blood);
+                                contact.put("cholesterol",cholesterol);
+                                contact.put("heart",heart);
+                                contact.put("temperature",temperature);
+
+                                arrayList.add(contact);
+                                ListAdapter adapter = new SimpleAdapter(
+                                        PatientView.this, arrayList, R.layout.list_test, new String[]{"date","blood",
+                                        "cholesterol","heart","temperature"}, new int[]{R.id.date,R.id.blood,
+                                        R.id.cholesterol,R.id.heart,R.id.temperature});
+
+                                lv.setAdapter(adapter);
 
 
-                                    //da=da+name+","+bp;
-                                    //  String dept = jresponse.getString("department");
-                                    HashMap<String, String> contact = new HashMap<>();
-
-                                    contact.put("namee", name);
-                                    contact.put("bp", bp);
-                                    contact.put("chol", chole);
-                                    contact.put("hb", heart);
-                                    contact.put("temp", tempi);
-                                    contact.put("date", date);
-                                      //da=contact.get("namee");
-                                    //Toast.makeText(PatientView.this,da, Toast.LENGTH_SHORT).show();
-
-                                    //Toast.makeText(SignIn.this, name+","+usern+","+pswd, Toast.LENGTH_SHORT).show();
-
-                                    // Toast.makeText(Staff_Data.this, id, Toast.LENGTH_SHORT).show();
-                                    //  Toast.makeText(MainActivity.this, rurl, Toast.LENGTH_LONG).show();
-                                    // Log.d("nickname",nickname);
-                                    arrayList.add(contact);
-                                    ListAdapter adapter = new SimpleAdapter(
-                                            PatientView.this, arrayList,
-                                            R.layout.s_n_list, new String[]{"namee", "bp", "chol",
-                                            "hb", "temp","date"}, new int[]{R.id.datee,
-                                            R.id.bP, R.id.chol, R.id.heartrate, R.id.temperatue, R.id.date});
-
-                                    lv.setAdapter(adapter);
-
-                                }
-
-                            } catch (Exception e) {
-                                e.printStackTrace();
                             }
 
-
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
 
-                    }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.e("Volley", "Error");
-                }
+
+                    }
+
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("Volley", "Error");
             }
-            );
-            requestQueue.add(req);
+        }
+        );
+
+        requestQueue.add(req);
 
     }
-     /*
-    @Override
-    protected void onPause() {
-        super.onPause();
-        overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
-    }
 
-    @Override
-    public void onBackPressed() {
-        //  super.onBackPressed();
-    }
-    */
 }
