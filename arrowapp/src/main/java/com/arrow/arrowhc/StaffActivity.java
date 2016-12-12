@@ -3,7 +3,11 @@ package com.arrow.arrowhc;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -39,7 +43,6 @@ public class StaffActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_);
-
 
         id=getIntent().getStringExtra("_id");   //Doctor id to search for patients
         profile=getIntent().getStringExtra("profile");   //Doctor id to search for patients
@@ -191,5 +194,41 @@ public class StaffActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
       //  super.onBackPressed();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_arrow, menu); //your file name
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_passwd:
+                // User chose the "Settings" item, show the app settings UI...
+
+                Intent intent=new Intent(getBaseContext(),ChangePassword.class);
+                intent.putExtra("id", id);
+                intent.putExtra("profile", profile);
+                intent.putExtra("name", name);
+                startActivity(intent);
+
+                return true;
+
+            case R.id.menu_signout:
+
+                Intent intent2=new Intent(getBaseContext(),SignIn.class);
+                startActivity(intent2);
+
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }

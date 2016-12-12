@@ -34,7 +34,9 @@
             android:parentActivityName=".PatientPage" />
         <activity android:name=".AdminPage" />
         <activity android:name=".CreateStaff" />
-        <activity android:name=".StaffManagement"></activity>
+        <activity android:name=".StaffManagement" />
+        <activity android:name=".ChangePassword"
+            android:parentActivityName=".StaffActivity" />
     </application>
 
 </manifest>
