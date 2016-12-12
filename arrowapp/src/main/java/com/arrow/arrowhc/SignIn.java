@@ -71,6 +71,14 @@ EditText user,paswd;Button sign_in;RequestQueue requestQueue;
                                                 startActivity(intent);
                                                 overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
                                             }
+                                            else if(profile.equalsIgnoreCase("admin"))
+                                            {
+                                                Intent intent = new Intent(getBaseContext(), AdminPage.class);
+                                                intent.putExtra("name", name);
+                                                intent.putExtra("_id", id);
+                                                startActivity(intent);
+                                                overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
+                                            }
                                         }
                                         else
                                         {

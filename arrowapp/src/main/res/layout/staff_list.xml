@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="NAME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/staffNames"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:text="PHONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/staffNames"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/staffphones" />
+
+    <TextView
+        android:text="E-Mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/staffphones"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="9dp"
+        android:id="@+id/staffemails" />
+
+    <TextView
+        android:text="DEPARTMENT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/staffphones"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/staffDepts" />
+
+    <TextView
+        android:text="USERNAME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/staffDepts"
+        android:layout_alignStart="@+id/staffphones"
+        android:id="@+id/staffusernames" />
+
+    <TextView
+        android:text="PASSWORD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/staffpswds"
+        android:layout_below="@+id/staffDepts"
+        android:layout_alignEnd="@+id/staffemails" />
+</RelativeLayout>

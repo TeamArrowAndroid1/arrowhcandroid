@@ -19,16 +19,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StaffActivity"
+        <activity
+            android:name=".StaffActivity"
             android:launchMode="singleTop" />
         <activity android:name=".AddPatient" />
         <activity android:name=".PatientView" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".PatientPage"
+        <activity
+            android:name=".PatientPage"
             android:launchMode="singleTop"
             android:parentActivityName=".StaffActivity" />
-        <activity android:name=".AddTest"
+        <activity
+            android:name=".AddTest"
             android:parentActivityName=".PatientPage" />
+        <activity android:name=".AdminPage" />
+        <activity android:name=".CreateStaff" />
+        <activity android:name=".StaffManagement"></activity>
     </application>
 
 </manifest>

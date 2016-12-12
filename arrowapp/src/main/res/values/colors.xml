@@ -9,4 +9,6 @@
     <color name="textBg">#00c5ff</color>
     <color name="textBg_">#cdeaf2</color>
     <color name="bg">#71cd9f</color>
+    <color name="bgD">#2d8e5d</color>
+    <color name="adminbg">#dbdbdb</color>
 </resources>
