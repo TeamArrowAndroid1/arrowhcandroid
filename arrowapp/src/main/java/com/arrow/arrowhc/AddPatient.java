@@ -1,6 +1,7 @@
 package com.arrow.arrowhc;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,31 +31,56 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 public class AddPatient extends AppCompatActivity {
-TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
-    String nurses[],doctors[];String daa;String  rurl;int p=0,q=0; String id=""; String profile="";String name="";String doc_name="";
-    ArrayList<String> aarayListD;Spinner dsppiner,nsppiner;ArrayAdapter<String> adapterD;ArrayAdapter<String> adapterN;
-    ArrayList<String> doctordata;ArrayAdapter<CharSequence> depts;ArrayAdapter<CharSequence> rooms;
-    ArrayList<String> nursedata;Spinner departs,roomnos;Button saveP;
+    TextView tv;
+    RequestQueue requestQueue;
+    ArrayList<String> aarayListN;
+
+    String nurses[],doctors[];String daa;String  rurl;
+
+    int p=0,q=0; String id="";
+
+    String profile="";String name="";String doc_name="";
+
+    ArrayList<String> aarayListD;
+    Spinner dsppiner,nsppiner;
+
+    ArrayAdapter<String> adapterD;
+    ArrayAdapter<String> adapterN;
+    ArrayList<String> doctordata;
+    ArrayAdapter<CharSequence> depts;
+    ArrayAdapter<CharSequence> rooms;
+    ArrayList<String> nursedata;
+    Spinner departs,roomnos;
+
+    Button saveP;
     String patientName,usernameP,paswdP,doctorName,finalDid,docUserName,NurseName,finalNid,NurseUserName,Pdepartment,PRoomNo;
 
-    EditText ename,euname,epswd;String docName,docId,dUserName,nurseName,nurseId,nurseUserName,departMent,roomNo;
+    EditText ename,euname,epswd;
+
+    String docName,docId,dUserName,nurseName,nurseId,nurseUserName,departMent,roomNo;
+
     String NAME;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__patient);
 
+        ActionBar ab = getSupportActionBar();
+        ab.setDefaultDisplayHomeAsUpEnabled(true);
+
+
         id=getIntent().getStringExtra("id");   //Doctor id to search for patients
         profile=getIntent().getStringExtra("profile");   //Doctor id to search for patients
         name=getIntent().getStringExtra("name");
 
 
-        Toast.makeText(this, name + " " + profile, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, name + " " + profile, Toast.LENGTH_SHORT).show();
         requestQueue= Volley.newRequestQueue(getBaseContext());
         doctordata=new ArrayList<>();
         nursedata=new ArrayList<>();
         aarayListN=new ArrayList<>();
         aarayListD=new ArrayList<>();
+
         tv=(TextView)findViewById(R.id.show);
 
 
@@ -75,6 +101,7 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
         depts=ArrayAdapter.createFromResource(getBaseContext(),R.array.departments,android.R.layout.simple_spinner_item);
         depts.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         departs.setAdapter(depts);
+
         rooms=ArrayAdapter.createFromResource(getBaseContext(),R.array.rooms,android.R.layout.simple_spinner_item);
         rooms.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         roomnos.setAdapter(rooms);
@@ -167,7 +194,9 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
                          for (int i = 0; i <response.length(); i++) {
                              JSONObject jresponse = response.getJSONObject(i);
                              String proname = jresponse.getString("profile");
-                           //  Toast.makeText(AddPatient.this, proname, Toast.LENGTH_SHORT).show();
+
+                             //Toast.makeText(AddPatient.this, proname, Toast.LENGTH_SHORT).show();
+
                               if(proname.equalsIgnoreCase("nurse"))
                               {
                                 //  Toast.makeText(AddPatient.this,"enet into nurses", Toast.LENGTH_SHORT).show();
@@ -184,7 +213,7 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
                                   String nData=contact.get("n_data");
                                   aarayListN.add(n+"(#"+un+")");
                                   nursedata.add(nData);
-                                 // Toast.makeText(AddPatient.this,"data in heap"+ da, Toast.LENGTH_SHORT).show();
+                                  // Toast.makeText(AddPatient.this,"data in heap "+ n + ", " + nData, Toast.LENGTH_SHORT).show();
 
                               }
                              else if(proname.equalsIgnoreCase("doctor"))
@@ -208,16 +237,19 @@ TextView tv;RequestQueue requestQueue;ArrayList<String> aarayListN;
                               }
 
                          }
-                        // Toast.makeText(AddPatient.this, "nurse list"+aarayListN.size(), Toast.LENGTH_SHORT).show();
 
-                          adapterD=new ArrayAdapter<String>(getBaseContext(),android.R.layout.simple_spinner_item,aarayListD);
-                          adapterD.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                         Toast.makeText(AddPatient.this, "nurse list ************", Toast.LENGTH_SHORT).show();
+
+                         adapterD=new ArrayAdapter<String>(getBaseContext(),android.R.layout.simple_spinner_item,aarayListD);
+                         adapterD.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                          dsppiner.setAdapter(adapterD);
+
                          adapterN=new ArrayAdapter<String>(getBaseContext(),android.R.layout.simple_spinner_item,aarayListN);
                          adapterN.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                          nsppiner.setAdapter(adapterN);
 
-                       // Toast.makeText(AddPatient.this, "docotr data list"+doctordata.size(), Toast.LENGTH_SHORT).show();
+
+                        //Toast.makeText(AddPatient.this, "docotr data list"+doctordata.size(), Toast.LENGTH_SHORT).show();
 
 
                      } catch (Exception e) {

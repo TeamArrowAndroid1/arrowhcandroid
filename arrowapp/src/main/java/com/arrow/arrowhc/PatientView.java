@@ -1,9 +1,13 @@
 package com.arrow.arrowhc;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -24,12 +28,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PatientView extends AppCompatActivity {
-    TextView tvname,tvid;
+
+    TextView tvname, tvid;
     FloatingActionButton f1,f2;
     ListView lv;
-    String id, username;
+    String id, username, name;
+
     ArrayList<HashMap<String,String>> arrayList;
     RequestQueue requestQueue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -43,22 +50,20 @@ public class PatientView extends AppCompatActivity {
 
         tvname=(TextView)findViewById(R.id.pname);
         tvid=(TextView)findViewById(R.id.idd);
-        //id=getIntent().getStringExtra("id");
+        id=getIntent().getStringExtra("id");
         username=getIntent().getStringExtra("username");
-        String namee=getIntent().getStringExtra("name");
+        name=getIntent().getStringExtra("name");
 
-        //Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
-        if(namee!=null)
+        if(name!=null)
         {
-            tvname.setText(namee);
-            //tvid.setText(id);
+            tvname.setText(name);
+            tvid.setText(id);
         }
 
+        /* FOR HARPREET
         f1=(FloatingActionButton)findViewById(R.id.callDoc);
         f2=(FloatingActionButton)findViewById(R.id.callNurse);
-
-        id = tvid.getText().toString();
-        Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
+        */
 
         data();
 
@@ -67,8 +72,6 @@ public class PatientView extends AppCompatActivity {
     public void data()
     {
         String  rurl="https://arrowhc.herokuapp.com/patient/"+username;
-
-        Toast.makeText(this, PatientView.this.tvid.getText().toString(), Toast.LENGTH_SHORT).show();
 
         JsonArrayRequest req = new JsonArrayRequest(rurl,
                 new Response.Listener<JSONArray>() {
@@ -124,4 +127,38 @@ public class PatientView extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_arrow, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_passwd:
+
+                Intent intent=new Intent(getBaseContext(),PatientPassword.class);
+                intent.putExtra("id", id);
+                intent.putExtra("username", username);
+                intent.putExtra("name", name);
+                startActivity(intent);
+
+                return true;
+
+            case R.id.menu_signout:
+
+                Intent intent2=new Intent(getBaseContext(),SignIn.class);
+                startActivity(intent2);
+
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
 }

@@ -33,7 +33,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class StaffActivity extends AppCompatActivity {
-    TextView tv;ListView lv;ArrayList<HashMap<String,String>> arrayList;String id,name, profile;
+    TextView tv;ListView lv;ArrayList<HashMap<String,String>> arrayList;
+    String id, name, profile;
     RequestQueue requestQueue;
     ImageButton searchb;Button addb;
     FloatingActionMenu materialDesignFAM;
@@ -45,10 +46,10 @@ public class StaffActivity extends AppCompatActivity {
         setContentView(R.layout.activity_staff_);
 
         id=getIntent().getStringExtra("_id");   //Doctor id to search for patients
-        profile=getIntent().getStringExtra("profile");   //Doctor id to search for patients
+        profile=getIntent().getStringExtra("profile");
         name=getIntent().getStringExtra("name");
 
-        Toast.makeText(getBaseContext(), "data is "+name, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getBaseContext(), "data is "+name, Toast.LENGTH_SHORT).show();
 
 
         floatingActionButton1=(FloatingActionButton)findViewById(R.id.searching);

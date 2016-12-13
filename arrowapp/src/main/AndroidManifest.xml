@@ -22,8 +22,12 @@
         <activity
             android:name=".StaffActivity"
             android:launchMode="singleTop" />
-        <activity android:name=".AddPatient" />
-        <activity android:name=".PatientView" />
+        <activity
+            android:name=".AddPatient"
+            android:parentActivityName=".StaffActivity" />
+        <activity
+            android:name=".PatientView"
+            android:launchMode="singleTop" />
         <activity android:name=".SearchActivity" />
         <activity
             android:name=".PatientPage"
@@ -35,8 +39,12 @@
         <activity android:name=".AdminPage" />
         <activity android:name=".CreateStaff" />
         <activity android:name=".StaffManagement" />
-        <activity android:name=".ChangePassword"
+        <activity
+            android:name=".ChangePassword"
             android:parentActivityName=".StaffActivity" />
+        <activity
+            android:name=".PatientPassword"
+            android:parentActivityName=".PatientView" />
     </application>
 
 </manifest>
