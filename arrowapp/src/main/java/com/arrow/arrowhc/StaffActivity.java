@@ -1,5 +1,7 @@
 package com.arrow.arrowhc;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,10 +20,12 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
@@ -34,7 +38,7 @@ import java.util.HashMap;
 
 public class StaffActivity extends AppCompatActivity {
     TextView tv;ListView lv;ArrayList<HashMap<String,String>> arrayList;
-    String id, name, profile;
+    String id, name, profile,d_id;
     RequestQueue requestQueue;
     ImageButton searchb;Button addb;
     FloatingActionMenu materialDesignFAM;
@@ -105,7 +109,35 @@ public class StaffActivity extends AppCompatActivity {
             }
         });
 
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int pos, long id) {
+                // TODO Auto-generated method stub
+                d_id=arrayList.get(pos).get("id");
 
+                //  Toast.makeText(StaffManagement.this, "pressed id is"+d_id, Toast.LENGTH_SHORT).show();
+
+                AlertDialog.Builder builder=new AlertDialog.Builder(StaffActivity.this);
+
+                builder.setTitle("DELETE OPERATION!");
+                builder.setMessage("Do you really want to delete?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        String rurl = "https://arrowhc.herokuapp.com/profile/"+d_id;
+                        deleteData(rurl);
+
+                    }
+                });
+
+                builder.setNegativeButton("No",null);
+                AlertDialog dialog=builder.create();
+                dialog.show();
+                return true;
+            }
+        });
 
     }
 
@@ -232,4 +264,34 @@ public class StaffActivity extends AppCompatActivity {
 
         }
     }
+
+
+    public void deleteData(String url)
+    {
+
+        RequestQueue mRequestQueue = Volley.newRequestQueue(getBaseContext());
+
+        StringRequest MyStringRequest = new StringRequest(Request.Method.DELETE, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast.makeText(StaffActivity.this, "Done!!", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getBaseContext(),StaffManagement.class);
+                intent.putExtra("profile",profile);
+                startActivity(intent);
+                // tv.setText("Done");
+                //This code is executed if the server responds, whether or not the response contains data.
+                //The String 'response' contains the server's response.
+            }
+        }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //This code is executed if there is an error.
+            }
+        }) ;
+
+
+        mRequestQueue.add(MyStringRequest);
+
+    }   //end newdata
+
 }

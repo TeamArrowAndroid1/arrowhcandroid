@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add__patient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.arrow.arrowhc.AddPatient">
+    <TextView
+        android:text="Add Patient"
+        android:textSize="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/show"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/bg"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show"
+        android:layout_marginTop="5dp">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/ll"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textSize="17dp"
+        android:layout_below="@+id/show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:id="@+id/pname"
+        android:hint="NAME" />
+   </android.support.design.widget.TextInputLayout>
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+
+        android:layout_marginTop="15dp"
+        android:id="@+id/dspinner"
+
+        android:layout_alignEnd="@+id/ll"
+        android:layout_alignStart="@+id/departs" />
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dspinner"
+        android:layout_alignEnd="@+id/ll"
+        android:layout_marginTop="15dp"
+        android:id="@+id/nspinner"
+        android:layout_alignStart="@+id/dspinner"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nurse"
+        android:textSize="17dp"
+        android:id="@+id/nur"
+        android:layout_alignTop="@+id/nspinner"
+        android:layout_alignStart="@+id/doctr" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor"
+        android:textSize="17dp"
+        android:id="@+id/doctr"
+        android:layout_alignTop="@+id/dspinner"
+        android:layout_alignStart="@+id/ll"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department"
+        android:layout_marginTop="15dp"
+        android:id="@+id/deptt"
+        android:textSize="17dp"
+        android:layout_below="@+id/nspinner"
+        android:layout_alignStart="@+id/nur" />
+    <Spinner
+        android:id="@+id/departs"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nspinner"
+        android:layout_alignEnd="@+id/ll"
+        android:layout_marginTop="15dp">
+    </Spinner>
+
+    <TextView
+        android:text="Room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deptt"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/deptt"
+        android:textSize="17dp"
+        android:id="@+id/r" />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/p_usernm"
+        android:layout_below="@+id/rr"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="17dp"
+        android:hint="USERNAME" />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/p_usernm"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="PASSWORD"
+        android:id="@+id/psswdd"
+        android:textSize="17dp"/>
+
+
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rr"
+        android:layout_alignTop="@+id/r"
+        android:layout_alignStart="@+id/departs"></Spinner>
+    </RelativeLayout>
+   </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </RelativeLayout>
+
+    <Button
+        android:textSize="20dp"
+        android:text="ADD PATIENT"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:id="@+id/addpatientt"
+
+        android:background="@drawable/search_b"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="123dp" />
+</RelativeLayout>

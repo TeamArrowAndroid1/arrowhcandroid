@@ -43,9 +43,13 @@ public class CreateStaff extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                addStaff();
-
+             if(Sname.getText().length()>2 && Sdeptartment.getText().length()>2 && Semail.getText().length()>2 && Sphone.getText().length()>2 && Susername.getText().length()>2 && Spswd.getText().length()>2) {
+                 addStaff();
+             }
+                else
+             {
+                 Toast.makeText(CreateStaff.this, "Please give Full info.!", Toast.LENGTH_SHORT).show();
+             }
             }
         });
 
@@ -60,7 +64,7 @@ public class CreateStaff extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
-                Toast.makeText(CreateStaff.this, "DONE!!", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(CreateStaff.this, "DONE!!", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(getBaseContext(),StaffManagement.class);
                 intent.putExtra("profile",profile);
                 startActivity(intent);

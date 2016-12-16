@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.arrow.arrowhc.AddTest"
+    android:background="@color/white">
+
+    <TextView
+        android:text="Patient Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tvName"
+        android:textAlignment="center"
+        android:layout_alignParentEnd="true"
+
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/tvName"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCholL"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/etBloodL"
+        android:textColorHint="@color/bg">
+
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etCholesterol"
+            android:hint="CHOLESTROL"
+            android:textColor="@color/bg"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etHeartL"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/etCholL"
+        android:textColorHint="@color/bg">
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etHeart"
+            android:hint="HEART RATE"
+            android:textColor="@color/bg"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+   </RelativeLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etBloodL"
+        android:textColorHint="@color/bg"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etBlood"
+            android:hint="BLOOD PRESSURE"
+            android:textColor="@color/bg"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTempL"
+        android:textColorHint="@color/bg"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etTemperature"
+            android:hint="TEMPERTAURE"
+            android:textColor="@color/bg"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+       android:textColor="@color/white"
+       android:textSize="30dp"
+       android:text="SAVE TEST"
+       android:layout_width="200dp"
+       android:layout_height="65dp"
+       android:id="@+id/saveButton"
+
+       android:background="@drawable/search_b"
+        android:layout_marginStart="19dp"
+        android:layout_alignBottom="@+id/etHeartL"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginBottom="25dp" />
+</RelativeLayout>

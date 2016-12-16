@@ -163,14 +163,22 @@ public class AddPatient extends AppCompatActivity {
         saveP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                newdata();  //save patient data
-                if(id!=null && profile!=null) {
-                    Intent intent = new Intent(getBaseContext(), StaffActivity.class);
-                    intent.putExtra("_id", id);
-                    intent.putExtra("profile", profile);
-                    intent.putExtra("name", name);
-                    startActivity(intent);
 
+
+                if(ename.getText().length()>2 && euname.getText().length()>2 && epswd.length()>2) {
+                    newdata();  //save patient data
+                    if (id != null && profile != null) {
+                        Intent intent = new Intent(getBaseContext(), StaffActivity.class);
+                        intent.putExtra("_id", id);
+                        intent.putExtra("profile", profile);
+                        intent.putExtra("name", name);
+                        startActivity(intent);
+
+                    }
+                }
+                else
+                {
+                    Toast.makeText(AddPatient.this, "Please fill full info.!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
