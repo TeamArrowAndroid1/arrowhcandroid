@@ -53,6 +53,7 @@ EditText user,paswd;Button sign_in;RequestQueue requestQueue;
                                         String pswd = jresponse.getString("password");
                                         String dept = jresponse.getString("department");
                                         String profile=jresponse.getString("profile");
+//                                        String phoneDoctor=jresponse.getString("phone");
                                       //  Toast.makeText(SignIn.this, "hlooo", Toast.LENGTH_SHORT).show();
                                       //  Toast.makeText(SignIn.this, name+","+usern+","+pswd, Toast.LENGTH_SHORT).show();
                                         if(user.getText().toString().equals(usern) && paswd.getText().toString().equals(pswd))
@@ -81,6 +82,7 @@ EditText user,paswd;Button sign_in;RequestQueue requestQueue;
                                                 Intent intent = new Intent(getBaseContext(), AdminPage.class);
                                                 intent.putExtra("name", name);
                                                 intent.putExtra("_id", id);
+                                                intent.putExtra("profile",profile);
                                                 startActivity(intent);
                                                 overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
                                             }

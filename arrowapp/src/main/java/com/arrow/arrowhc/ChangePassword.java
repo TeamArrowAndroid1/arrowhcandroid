@@ -37,9 +37,9 @@ public class ChangePassword extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setDefaultDisplayHomeAsUpEnabled(true);
 
-        id=getIntent().getStringExtra("id");   //Doctor id to search for patients
-        profile=getIntent().getStringExtra("profile");   //Doctor id to search for patients
-        name=getIntent().getStringExtra("name");
+        id = getIntent().getStringExtra("id");   //Doctor id to search for patients
+        profile = getIntent().getStringExtra("profile");   //Doctor id to search for patients
+        name = getIntent().getStringExtra("name");
 
         TextView tvName = (TextView) findViewById(R.id.textView4);
         tvName.setText(name);
@@ -59,16 +59,13 @@ public class ChangePassword extends AppCompatActivity {
 
                     RequestQueue mRequestQueue = Volley.newRequestQueue(getBaseContext());
 
-                    String url = "https://arrowhc.herokuapp.com/profile/"+id;
+                    String url = "https://arrowhc.herokuapp.com/profile/" + id;
 
                     StringRequest MyStringRequest = new StringRequest(Request.Method.PUT, url, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
 
-                            // Toast.makeText(ChangePassword.this, response, Toast.LENGTH_SHORT).show();
 
-                            //This code is executed if the server responds, whether or not the response contains data.
-                            //The String 'response' contains the server's response.
                         }
                     }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
                         @Override
@@ -78,8 +75,8 @@ public class ChangePassword extends AppCompatActivity {
                     }) {
                         protected Map<String, String> getParams() {
                             Map<String, String> MyData = new HashMap<String, String>();
-                            MyData.put("name",name); //Add the data you'd like to send to the server.
-                            MyData.put("password",sNewPasswd);
+                            MyData.put("name", name); //Add the data you'd like to send to the server.
+                            MyData.put("password", sNewPasswd);
 
                             return MyData;
                         }
@@ -88,22 +85,35 @@ public class ChangePassword extends AppCompatActivity {
                     mRequestQueue.add(MyStringRequest);
 
                     Toast.makeText(ChangePassword.this, "Your password has been changed", Toast.LENGTH_SHORT).show();
+                    if (profile.equalsIgnoreCase("doctor") || profile.equalsIgnoreCase("nurse")) {
+                        Intent intent = new Intent(getBaseContext(), StaffActivity.class);
+                        intent.putExtra("_id", id);
+                        intent.putExtra("profile", profile);
+                        intent.putExtra("name", name);
+                        startActivity(intent);
 
-                    Intent intent=new Intent(getBaseContext(),StaffActivity.class);
-                    intent.putExtra("_id", id);
-                    intent.putExtra("profile", profile);
-                    intent.putExtra("name", name);
-                    startActivity(intent);
+                    } else if (profile.equalsIgnoreCase("patient")) {
+                        Intent intent = new Intent(getBaseContext(), PatientView.class);
+                        intent.putExtra("_id", id);
+                        intent.putExtra("profile", profile);
+                        intent.putExtra("name", name);
+                        startActivity(intent);
+                    } else if (profile.equalsIgnoreCase("admin")) {
+                        Intent intent = new Intent(getBaseContext(), AdminPage.class);
+                        intent.putExtra("_id", id);
+                        intent.putExtra("profile", profile);
+                        intent.putExtra("name", name);
+                        startActivity(intent);
+                    } else {
 
-                } else {
+                        Toast.makeText(ChangePassword.this, "The Re-Type Password is different than New Password", Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(ChangePassword.this, "The Re-Type Password is different than New Password", Toast.LENGTH_SHORT).show();
+                    }
 
                 }
-
             }
+
+
         });
-
-
     }
 }

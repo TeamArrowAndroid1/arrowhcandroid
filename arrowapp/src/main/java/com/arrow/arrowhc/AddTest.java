@@ -28,12 +28,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddTest extends AppCompatActivity {
-    EditText etCholesterol,etTemperature,etBlood,etHeart,tvResponse; TextView tvName;
+    EditText etCholesterol,etTemperature,etBlood,etHeart;
+    TextView tvName;
     String sCholesterol,sTemperature,sBlood,sHeart,currentDateTimeString,sPatientName,sPatienId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_test);
+
+        //declaration of Text fields
         etCholesterol = (EditText) findViewById(R.id.etCholesterol);
         etTemperature = (EditText) findViewById(R.id.etTemperature);
         etBlood = (EditText) findViewById(R.id.etBlood);
@@ -70,7 +73,7 @@ public class AddTest extends AppCompatActivity {
                  {
                      Toast.makeText(AddTest.this, "Please full info.!", Toast.LENGTH_SHORT).show();
                  }
-                //Toast.makeText(this,"Put"+ paswdP+","+finalDid+","+ doctorName, Toast.LENGTH_LONG).show();
+
 
 
             }
@@ -85,15 +88,13 @@ public class AddTest extends AppCompatActivity {
 
         String url = "https://arrowhc.herokuapp.com/test";
 
-       // tvResponse.setText(url);
+
 
         StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
-            //    tvResponse.setText(response);
-                //This code is executed if the server responds, whether or not the response contains data.
-                //The String 'response' contains the server's response.
+
             }
         }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
             @Override
@@ -101,9 +102,10 @@ public class AddTest extends AppCompatActivity {
                 //This code is executed if there is an error.
             }
         }) {
+            //Add the data you'd like to send to the server.
             protected Map<String, String> getParams() {
                 Map<String, String> MyData = new HashMap<String, String>();
-                MyData.put("patient_name",sPatientName); //Add the data you'd like to send to the server.
+                MyData.put("patient_name",sPatientName);
                 MyData.put("patient_id", sPatienId);
                 MyData.put("blood_presure", sBlood);
                 MyData.put("cholesterol", sCholesterol);

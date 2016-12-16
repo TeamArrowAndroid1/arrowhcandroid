@@ -7,12 +7,14 @@ package com.arrow.arrowhc;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -35,9 +37,9 @@ import java.util.HashMap;
 public class PatientView extends AppCompatActivity {
 
     TextView tvname, tvid;
-    FloatingActionButton f1,f2;
+    FloatingActionButton msgD;
     ListView lv;
-    String id, username, name;
+    String id, username, name,docusername,Doctorsnumber;
 
     ArrayList<HashMap<String,String>> arrayList;
     RequestQueue requestQueue;
@@ -51,7 +53,22 @@ public class PatientView extends AppCompatActivity {
         requestQueue= Volley.newRequestQueue(getBaseContext());
         arrayList=new ArrayList<>();
         lv=(ListView)findViewById(R.id.list);
+         //declaration of message buttons
 
+         msgD=(FloatingActionButton)findViewById(R.id.callDoc);
+
+
+        msgD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //msg to doctor
+                getDocNumber();
+               //
+
+
+
+            }
+        });
 
         tvname=(TextView)findViewById(R.id.pname);
         tvid=(TextView)findViewById(R.id.idd);
@@ -62,13 +79,10 @@ public class PatientView extends AppCompatActivity {
         if(name!=null)
         {
             tvname.setText(name);
-            tvid.setText(id);
+            tvid.setText("("+username+")");
         }
 
-        /* FOR HARPREET
-        f1=(FloatingActionButton)findViewById(R.id.callDoc);
-        f2=(FloatingActionButton)findViewById(R.id.callNurse);
-        */
+
 
         data();
 
@@ -92,6 +106,7 @@ public class PatientView extends AppCompatActivity {
                                 String cholesterol= jresponse.getString("cholesterol");
                                 String heart = jresponse.getString("heart_rate");
                                 String temperature = jresponse.getString("temperature");
+                                docusername = jresponse.getString("doc_username");  //get doctor username to get his phone number
                                 String testdate = jresponse.getString("date");
 
                                 HashMap<String,String> contact = new HashMap<>();
@@ -166,4 +181,47 @@ public class PatientView extends AppCompatActivity {
 
         }
     }
+
+
+    public void getDocNumber()
+    {
+        String uurl="https://arrowhc.herokuapp.com/profile/"+docusername;
+     RequestQueue reqQ=Volley.newRequestQueue(getBaseContext());
+        JsonArrayRequest req = new JsonArrayRequest(uurl,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+
+                        try {
+                            for (int i = 0; i <response.length(); i++) {
+                                JSONObject jresponse = response.getJSONObject(i);
+                               Doctorsnumber = jresponse.getString("phone");
+
+
+
+                            }
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + Doctorsnumber));
+                        intent.putExtra("sms_body", "Please come I am not feeling well!" +", by "+name+"("+username+")");
+                        startActivity(intent);
+
+                    }
+
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("Volley", "Error");
+            }
+        }
+        );
+         reqQ.add(req);
+
+
+
+
+    }
+
 }

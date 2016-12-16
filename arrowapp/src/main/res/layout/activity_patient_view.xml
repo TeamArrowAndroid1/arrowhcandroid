@@ -38,7 +38,8 @@
         android:layout_height="200dp"
         android:id="@+id/list"
         android:layout_below="@+id/idd"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@color/bg"/>
 
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/social_floating_menu"
@@ -84,19 +85,10 @@
             android:id="@+id/callDoc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/call"
+            android:src="@drawable/msg"
             fab:fab_size="mini"
             fab:fab_progress_backgroundColor="@color/black"
             fab:fab_label="SEARCH PATIENT"/>
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/callNurse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/call"
-            fab:fab_size="mini"
-            fab:fab_progress_backgroundColor="@color/black"
-            fab:fab_label="ADD PATIENT"/>
 
 
     </com.github.clans.fab.FloatingActionMenu>

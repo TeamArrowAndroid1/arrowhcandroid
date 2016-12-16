@@ -36,15 +36,23 @@
         <activity
             android:name=".AddTest"
             android:parentActivityName=".PatientPage" />
-        <activity android:name=".AdminPage" />
-        <activity android:name=".CreateStaff" />
-        <activity android:name=".StaffManagement" />
+        <activity
+            android:name=".AdminPage"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".CreateStaff"
+            android:parentActivityName=".StaffManagement" />
+        <activity
+            android:name=".StaffManagement"
+            android:launchMode="singleTop"
+            android:parentActivityName=".AdminPage" />
         <activity
             android:name=".ChangePassword"
             android:parentActivityName=".StaffActivity" />
         <activity
             android:name=".PatientPassword"
             android:parentActivityName=".PatientView" />
+        <activity android:name=".Empty"></activity>
     </application>
 
 </manifest>

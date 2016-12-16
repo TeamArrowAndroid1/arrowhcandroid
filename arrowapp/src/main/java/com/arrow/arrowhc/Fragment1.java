@@ -33,7 +33,8 @@ import java.util.HashMap;
 
 
 /**
- * Created by Harry on 2016-12-01.
+ * Created by Team-Arrow on 2016-12-01.
+ * Harpreet Singh
  */
 
 
@@ -82,14 +83,12 @@ public class Fragment1 extends Fragment {
     {
         String  rurl="https://arrowhc.herokuapp.com/patient";
 
-        //Toast.makeText(StaffActivity.this,rurl, Toast.LENGTH_SHORT).show();
+
         JsonArrayRequest req = new JsonArrayRequest(rurl,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        String da="";
 
-                        //  Toast.makeText(StaffActivity.this, url, Toast.LENGTH_SHORT).show();
                         try {
                             for (int i = 0; i <response.length(); i++) {
                                 JSONObject jresponse = response.getJSONObject(i);
@@ -99,11 +98,8 @@ public class Fragment1 extends Fragment {
                                 String room = jresponse.getString("room_no");
                                 String deptt=jresponse.getString("department");
 
-                                if(e.getText().toString().equals(name)) {
-                                    Toast.makeText(getContext(), "matched", Toast.LENGTH_SHORT).show();
+                                if(e.getText().toString().equalsIgnoreCase(name)) {
 
-                                    //  da=da+name+","+did;
-                                    //  String dept = jresponse.getString("department");
                                     HashMap<String, String> storer = new HashMap<>();
 
                                     storer.put("namee", name);
@@ -111,17 +107,11 @@ public class Fragment1 extends Fragment {
                                     storer.put("nursee", nurse);
                                     storer.put("roomm", room);
                                     storer.put("dept", deptt);
-                                    da = storer.get("dept");
-                                    Toast.makeText(getContext(), da, Toast.LENGTH_SHORT).show();
 
-                                    //Toast.makeText(SignIn.this, name+","+usern+","+pswd, Toast.LENGTH_SHORT).show();
 
-                                    // Toast.makeText(Staff_Data.this, id, Toast.LENGTH_SHORT).show();
-                                    //  Toast.makeText(MainActivity.this, rurl, Toast.LENGTH_LONG).show();
-                                    // Log.d("nickname",nickname);
                                     arayList.add(storer);
 
-                                    // Toast.makeText(SearchActivity.this, (CharSequence) arayList, Toast.LENGTH_SHORT).show();
+                                   ;
 
                                     ListAdapter adapter = new SimpleAdapter(
                                             getActivity(), arayList,
@@ -133,7 +123,7 @@ public class Fragment1 extends Fragment {
                                 }
                                 else
                                 {
-                                    Toast.makeText(getContext(), "Sry No Data with this name!", Toast.LENGTH_SHORT).show();
+
                                 }
 
                             }

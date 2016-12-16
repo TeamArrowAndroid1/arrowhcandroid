@@ -8,6 +8,7 @@ package com.arrow.arrowhc;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,14 +46,19 @@ public class StaffManagement extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_management);
 
+        ActionBar ab = getSupportActionBar();
+        ab.setDefaultDisplayHomeAsUpEnabled(true);
+
            //initialize requestqueue and arraylist
               requestQueue= Volley.newRequestQueue(getBaseContext());
               arrayList=new ArrayList<>();
 
         profile=getIntent().getStringExtra("profile");
         Toast.makeText(this, profile, Toast.LENGTH_SHORT).show();
+
         //declare listview
         lv=(ListView)findViewById(R.id.staffLists);
+
         //declare addNew button
         addBtn=(Button)findViewById(R.id.addStaff);
         addBtn.setOnClickListener(new View.OnClickListener() {
@@ -71,10 +77,11 @@ public class StaffManagement extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
                                            int pos, long id) {
-                // TODO Auto-generated method stub
+
+                //get doctor id from doctors list
                 d_id=arrayList.get(pos).get("id");
 
-              //  Toast.makeText(StaffManagement.this, "pressed id is"+d_id, Toast.LENGTH_SHORT).show();
+
 
                 AlertDialog.Builder builder=new AlertDialog.Builder(StaffManagement.this);
 
@@ -169,8 +176,12 @@ public class StaffManagement extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(StaffManagement.this, "Done!!", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(getBaseContext(),StaffManagement.class);
+
+
+              Intent intent=new Intent(getBaseContext(),Empty.class);
+
                 intent.putExtra("profile",profile);
+
                 startActivity(intent);
                // tv.setText("Done");
                 //This code is executed if the server responds, whether or not the response contains data.

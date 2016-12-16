@@ -36,15 +36,14 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 public class AddPatient extends AppCompatActivity {
+
+    String patientName,usernameP,paswdP,doctorName,finalDid,docUserName,NurseName,finalNid,NurseUserName,Pdepartment,PRoomNo;
     TextView tv;
     RequestQueue requestQueue;
+
     ArrayList<String> aarayListN;
 
-    String nurses[],doctors[];String daa;String  rurl;
-
-    int p=0,q=0; String id="";
-
-    String profile="";String name="";String doc_name="";
+    String profile="", name="", id="",nurseName;
 
     ArrayList<String> aarayListD;
     Spinner dsppiner,nsppiner;
@@ -55,14 +54,15 @@ public class AddPatient extends AppCompatActivity {
     ArrayAdapter<CharSequence> depts;
     ArrayAdapter<CharSequence> rooms;
     ArrayList<String> nursedata;
+
     Spinner departs,roomnos;
 
     Button saveP;
-    String patientName,usernameP,paswdP,doctorName,finalDid,docUserName,NurseName,finalNid,NurseUserName,Pdepartment,PRoomNo;
+
 
     EditText ename,euname,epswd;
 
-    String docName,docId,dUserName,nurseName,nurseId,nurseUserName,departMent,roomNo;
+
 
     String NAME;
     @Override
@@ -79,7 +79,7 @@ public class AddPatient extends AppCompatActivity {
         name=getIntent().getStringExtra("name");
 
 
-        //Toast.makeText(this, name + " " + profile, Toast.LENGTH_SHORT).show();
+
         requestQueue= Volley.newRequestQueue(getBaseContext());
         doctordata=new ArrayList<>();
         nursedata=new ArrayList<>();
@@ -99,7 +99,7 @@ public class AddPatient extends AppCompatActivity {
         saveP=(Button)findViewById(R.id.addpatientt);
 
 
-        data();
+        data();  //to fetch data of all doctors and nurses to show in spinner
 
 
 
@@ -114,9 +114,9 @@ public class AddPatient extends AppCompatActivity {
         dsppiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-              //  String docy= (String) parent.getItemAtPosition(position);
+             //get doctor by selecting from doctor spinner(dropdown)
                 doctorName=parent.getItemAtPosition(position).toString();
-               // Toast.makeText(AddPatient.this, docName, Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
@@ -128,9 +128,9 @@ public class AddPatient extends AppCompatActivity {
         nsppiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //  String docy= (String) parent.getItemAtPosition(position);
+                //get Nurse by selecting from Nurse spinner(dropdown)
                 nurseName=parent.getItemAtPosition(position).toString();
-              //  Toast.makeText(AddPatient.this, nurseName, Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
@@ -142,8 +142,10 @@ public class AddPatient extends AppCompatActivity {
          departs.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
              @Override
              public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                 //get department for patient by selecting from department spinner(dropdown)
                  Pdepartment=parent.getItemAtPosition(position).toString();
-               //  Toast.makeText(AddPatient.this,departMent, Toast.LENGTH_SHORT).show();
+
              }
 
              @Override
@@ -155,8 +157,10 @@ public class AddPatient extends AppCompatActivity {
            roomnos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                @Override
                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                   //set room for patient by selecting from rooms spinner(dropdown)
                    PRoomNo=parent.getItemAtPosition(position).toString();
-                 //  Toast.makeText(AddPatient.this,roomNo, Toast.LENGTH_SHORT).show();
+
                }
 
                @Override
@@ -169,10 +173,12 @@ public class AddPatient extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                  //Text fields should not be empty
                 if(ename.getText().length()>2 && euname.getText().length()>2 && epswd.length()>2) {
                     newdata();  //save patient data
                     if (id != null && profile != null) {
+
+                        //go back to staff page and new patient will be there in list of patients
                         Intent intent = new Intent(getBaseContext(), StaffActivity.class);
                         intent.putExtra("_id", id);
                         intent.putExtra("profile", profile);
@@ -195,24 +201,22 @@ public class AddPatient extends AppCompatActivity {
  {
    final   String  rurl="https://arrowhc.herokuapp.com/profile";
 
-     //Toast.makeText(StaffActivity.this,rurl, Toast.LENGTH_SHORT).show();
+
      JsonArrayRequest req = new JsonArrayRequest(rurl,
              new Response.Listener<JSONArray>() {
                  @Override
                  public void onResponse(JSONArray response) {
                      String da="";
 
-                     //  Toast.makeText(StaffActivity.this, url, Toast.LENGTH_SHORT).show();
+
                      try {
                          for (int i = 0; i <response.length(); i++) {
                              JSONObject jresponse = response.getJSONObject(i);
                              String proname = jresponse.getString("profile");
 
-                             //Toast.makeText(AddPatient.this, proname, Toast.LENGTH_SHORT).show();
-
                               if(proname.equalsIgnoreCase("nurse"))
                               {
-                                //  Toast.makeText(AddPatient.this,"enet into nurses", Toast.LENGTH_SHORT).show();
+
                                    String nurid=jresponse.getString("_id");
                                   String nurse_name=jresponse.getString("name");
                                   String nusername=jresponse.getString("username");
@@ -226,12 +230,12 @@ public class AddPatient extends AppCompatActivity {
                                   String nData=contact.get("n_data");
                                   aarayListN.add(n+"(#"+un+")");
                                   nursedata.add(nData);
-                                  // Toast.makeText(AddPatient.this,"data in heap "+ n + ", " + nData, Toast.LENGTH_SHORT).show();
+
 
                               }
                              else if(proname.equalsIgnoreCase("doctor"))
                               {
-                                //  Toast.makeText(AddPatient.this, "Enter into doctors", Toast.LENGTH_SHORT).show();
+
                                   String docid=jresponse.getString("_id");
                                   String doctor_name=jresponse.getString("name");
                                   String dusername=jresponse.getString("username");
@@ -245,13 +249,13 @@ public class AddPatient extends AppCompatActivity {
                                   String dii=contactd.get("did");
                                   aarayListD.add(da+"(#"+du+")");
                                   doctordata.add(dii+","+da+","+du);
-                                 // Toast.makeText(AddPatient.this, "doctor heap"+da, Toast.LENGTH_SHORT).show();
+
 
                               }
 
                          }
 
-                         Toast.makeText(AddPatient.this, "nurse list ************", Toast.LENGTH_SHORT).show();
+
 
                          adapterD=new ArrayAdapter<String>(getBaseContext(),android.R.layout.simple_spinner_item,aarayListD);
                          adapterD.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -262,7 +266,7 @@ public class AddPatient extends AppCompatActivity {
                          nsppiner.setAdapter(adapterN);
 
 
-                        //Toast.makeText(AddPatient.this, "docotr data list"+doctordata.size(), Toast.LENGTH_SHORT).show();
+
 
 
                      } catch (Exception e) {
@@ -288,9 +292,8 @@ public class AddPatient extends AppCompatActivity {
                  patientName=ename.getText().toString();
            usernameP=euname.getText().toString();
           paswdP=epswd.getText().toString();
-            //get docname , nurseName,Department,room
-           String finalid="";
-           String finalNurseId="";
+            //get doctorname , nurseName,Department,room
+
         int totalElements = doctordata.size();
 
 
@@ -299,7 +302,7 @@ public class AddPatient extends AppCompatActivity {
         {
 
                String dd=doctordata.get(index).toString();
-           // Toast.makeText(getBaseContext(), dd, Toast.LENGTH_LONG).show();
+
             String parts[] = dd.split(",");
 
              String iid=parts[0];
@@ -318,9 +321,9 @@ public class AddPatient extends AppCompatActivity {
             if(NAME.equalsIgnoreCase(iname) && docUserName.equalsIgnoreCase(iuname))
             {
                 finalDid=iid;
-               // Toast.makeText(this,"doctor id= " +finalDid, Toast.LENGTH_SHORT).show();
+
             }
-          //  Toast.makeText(this, nameUsername[0]+","+finalUserName, Toast.LENGTH_SHORT).show();
+
 
 
         }
@@ -345,7 +348,7 @@ public class AddPatient extends AppCompatActivity {
             if(NurseName.equalsIgnoreCase(nname) && NurseUserName.equalsIgnoreCase(nuname))
             {
                 finalNid=niid;
-              //  Toast.makeText(this, "nurse id"+finalNid, Toast.LENGTH_SHORT).show();
+
             }
         }
         Toast.makeText(this,"Put"+ paswdP+","+finalDid+","+ doctorName, Toast.LENGTH_LONG).show();
@@ -356,8 +359,7 @@ public class AddPatient extends AppCompatActivity {
             public void onResponse(String response) {
 
                 tv.setText("Done");
-                //This code is executed if the server responds, whether or not the response contains data.
-                //The String 'response' contains the server's response.
+
             }
         }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
             @Override
@@ -394,7 +396,7 @@ public class AddPatient extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
+         //code to perform activity change transition
         overridePendingTransition(R.anim.activity_open_transition,R.anim.activity_closescale);
 
     }

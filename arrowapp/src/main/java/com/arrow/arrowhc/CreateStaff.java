@@ -6,6 +6,7 @@
 package com.arrow.arrowhc;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,15 +27,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CreateStaff extends AppCompatActivity {
-     EditText Sname,Sdeptartment,Semail,Sphone,Susername,Spswd;String profile;
+     EditText Sname,Sdeptartment,Semail,Sphone,Susername,Spswd;
+     String profile;
      Button create;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_staff);
-
+        ActionBar ab = getSupportActionBar();
+        ab.setDefaultDisplayHomeAsUpEnabled(true);
         //declaration of textfiellds
+
         profile=getIntent().getStringExtra("profile");
         Toast.makeText(this, profile, Toast.LENGTH_SHORT).show();
         Sname=(EditText)findViewById(R.id.staffName);
@@ -43,7 +47,9 @@ public class CreateStaff extends AppCompatActivity {
         Sphone=(EditText)findViewById(R.id.staffPhone);
         Susername=(EditText)findViewById(R.id.staffUserN);
         Spswd=(EditText)findViewById(R.id.staffPswd);
-          //declaration of button
+
+        //declaration of button
+
         create=(Button)findViewById(R.id.create);
         create.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +75,8 @@ public class CreateStaff extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
-               // Toast.makeText(CreateStaff.this, "DONE!!", Toast.LENGTH_SHORT).show();
+
+
                 Intent intent=new Intent(getBaseContext(),StaffManagement.class);
                 intent.putExtra("profile",profile);
                 startActivity(intent);
@@ -82,9 +89,11 @@ public class CreateStaff extends AppCompatActivity {
                 //This code is executed if there is an error.
             }
         }) {
+            //Add the data you'd like to send to the server.
+
             protected Map<String, String> getParams() {
                 Map<String, String> MyData = new HashMap<String, String>();
-                MyData.put("name",Sname.getText().toString()); //Add the data you'd like to send to the server.
+                MyData.put("name",Sname.getText().toString());
                 MyData.put("department", Sdeptartment.getText().toString());
                 MyData.put("email", Semail.getText().toString());
                 MyData.put("phone", Sphone.getText().toString());
