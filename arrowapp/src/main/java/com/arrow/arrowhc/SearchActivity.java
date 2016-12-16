@@ -47,7 +47,7 @@ TabLayout tabLayout;ArrayList<HashMap<String,String>> arayList;
         setContentView(R.layout.activity_search_);
 
         search1=(Button)findViewById(R.id.by_n);
-        search2=(ImageButton)findViewById(R.id.by_d);
+
         requestQueue= Volley.newRequestQueue(getBaseContext());
         arayList=new ArrayList<>();
         viewPager=(ViewPager)findViewById(R.id.vpager);
